@@ -1,0 +1,2961 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Control de Comisiones 2026</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEs0lEQVR4nO2VXWgcVRTHf3PvfGbTzQdm2+1umtYEv5JomqBG+2BU1IeilGqRiqDUD9T6KmhRTFCoiKL4qGL1oaBYtCoKKmgV9UGrCLaWtNlW3aQNpprMZHd2ZpOZ48OWUkGlgmLB/B7vPed/D+dc/geWWGKJ/zuGiKjR0dG/lfRH8f+Exn+CISI9UeQztm0bjuPgOA4dHR0EcUwcN4KyjkNMTBzHdGQ7uHPrVnzfPynS0tJC5P/MO2+/z8TkJDMzMwRBcFKvWCySzTpMlkoQx1w2MsJ1N2zCjyLML/d+Nf7E44+z77t9oBSmqbFMEzEgSVJA0IYmlRQwqIZVzioU2LBhw8kCZudmuX79Bqanp/GamkAgFQGENE1pbl7GpcOXk8+vpHVlll+DBfZ+vZdzLujDHB8fV/v272c+rGBaNnFQRxlg2zau66K1RljANk0c1yWszvPcs89QKBZJkwTHcXjt1dcIwxqPPPwQvh/w8/HjHDs6zdTUFEd+/IFiscDg2iEc16Y0UcLLZJiamua83n7MgYsGpFIJWbduHf19vUwcPIQ/5zPnzxFUqoRhyEIUESwuEsZ1OjuLHDx0kEsuvhilNGma4FkWl14+zEsv7mDm+AxhNSSKYizbwg/mueKKKxlcO8iy5iYMFvn0sy+5664tYIDZ39dnbLxxI80Zl0dHH6MyO4OkKdVaiO8HzP46y/GZGX4ql7EclzXda7j3vvvZtGkTAwMDGIbB7jfe4OjRY2Rsk+W5s1i+Is+qzk7OOfc8OotFzu/tpWPFCjy3iaA6xzff7mNw7QB+pYopIqxevZojhw+RJBFRFOM4NtnmLG2tbfT0dKOUxrA8SuMHeOrZ51iWbWHnzp1YlgVAWA159713ufmmjWy543Zasq3YngtoQEASFtIUgOp8Bc9xMIA0TVGGYdDV1UUc19GGQmkFwGKaEMcxlWqVej3ms08+5sWXX6Fej+jv68eyLKIoIkkSBocG0aZJ+eg0pYMT2I5DLZgnqvjUqxWS+gJGkjSKDefxXBcAEUEBdHV1oZRiMY5RSqGUQmuNUpqMl6FUOsKuN9/iumuvZmU+z8jICCKCaZporRkeHmZVZyc9a1YxcfgwKaCUwtSNewOQJCFJEmbnfLIt2UYBgAIkl8tJWIsEA2ltbRXX9cS2bLFsS0zPlU8//0K6z14tA/0Xyv7vD8j69evFMAxRSkmappLP56VQKMias7vl1tu2iFKGOM0ZMT1PtOuJcprE8paJ1lqmj01Le3ubNBogYiapGIVCgdnZOZ58+mmuuepqMpkMTZkMplYYvyjaWrO0t7fxwIPb6O3tJ5fLNdqnFCICwObNtzA2NoptOxTyy3FdD1NrAOoLdWpxTLk8yQcffsTY2CgAWimMMKwlnueye/duduzYQRxHjc+hFcpojMO2bWq1iEKhwPbt22lvb28InHggSRK01jz//Avs2vU6tmM3Wpw2jMiyLDwvg23bDA0Ncc89d6NNkyCsNaz4VG8ul8vs2bOHUqlEEAR0dBTp7e1heHiYXC53Wv5eLpeZPGHJcRzT3d1NsVj8XX5ERBydlty/iyEi6tSDv1qTp7tC/yzujFnBSyyxxBnFbwH+DNtCwKzXAAAAAElFTkSuQmCC">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #2E5C8A;
+  --primary-dark: #1e3f5a;
+  --success: #00875A;
+  --warning: #FFAB00;
+  --danger: #DE350B;
+  --gray-50: #FAFBFC;
+  --gray-100: #F4F5F7;
+  --gray-200: #EBECF0;
+  --gray-300: #DFE1E6;
+  --gray-700: #505F79;
+  --gray-900: #091E42;
+  
+  --freq-mensual-bg: #DEEBFF; --freq-mensual-fg: #0747A6;
+  --freq-trimestral-bg: #E3FCEF; --freq-trimestral-fg: #006644;
+  --freq-semestral-bg: #FFFAE6; --freq-semestral-fg: #7F5F01;
+  --freq-anual-bg: #FFEBE6; --freq-anual-fg: #BF2600;
+  --freq-contado-bg: #EAE6FF; --freq-contado-fg: #403294;
+  --freq-dedauto-bg: #E6FCFF; --freq-dedauto-fg: #00626F;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+  font-size: 12px;
+  background: var(--gray-50);
+  color: var(--gray-900);
+  line-height: 1.4;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 20px 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 4px; }
+header .subtitle { font-size: 12px; opacity: 0.9; }
+
+.tab-bar {
+  background: white;
+  border-bottom: 2px solid var(--gray-200);
+  padding: 0 24px;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  padding: 14px 20px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-700);
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.tab-btn:hover { background: var(--gray-100); color: var(--primary); }
+.tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); background: var(--gray-50); }
+
+.page { display: none; padding: 24px 32px; max-width: 1800px; margin: 0 auto; }
+.page.active { display: block; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  border: 1px solid var(--gray-200);
+}
+
+.stat-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: -0.5px;
+}
+
+.stat-value.green { color: var(--success); }
+.stat-value.orange { color: var(--warning); }
+.stat-value.red { color: var(--danger); }
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.toolbar input, .toolbar select {
+  border: 1px solid var(--gray-300);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+.toolbar input:focus, .toolbar select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(46, 92, 138, 0.1);
+}
+
+.toolbar input[type="text"] { min-width: 240px; }
+
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn.success { background: var(--success); }
+.btn.success:hover { background: #006644; }
+.btn.danger { background: var(--danger); }
+.btn.danger:hover { background: #BF2600; }
+.btn.small { padding: 3px 8px; font-size: 10px; }
+
+.table-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+}
+
+.table-scroll { overflow-x: auto; max-height: 600px; overflow-y: auto; }
+
+table { width: 100%; border-collapse: collapse; font-size: 11px; }
+
+thead th {
+  background: var(--gray-900);
+  color: white;
+  padding: 10px 8px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+thead th.center { text-align: center; }
+thead th.right { text-align: right; }
+
+tbody tr { border-bottom: 1px solid var(--gray-200); transition: background 0.15s; }
+tbody tr:hover { background: var(--gray-50); }
+tbody tr:nth-child(even) { background: #FAFBFC; }
+tbody tr:nth-child(even):hover { background: var(--gray-100); }
+
+td { padding: 8px; white-space: nowrap; }
+td.right { text-align: right; font-family: 'JetBrains Mono', monospace; }
+td.center { text-align: center; }
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.badge-pagado { background: #E3FCEF; color: #006644; }
+.badge-pendiente { background: #FFF0B3; color: #7F5F01; }
+.badge-vencido { background: #FFF59D; color: #F57C00; font-weight: 600; }
+.badge-atrasado { background: #FFF9C4; color: #F57C00; font-weight: 600; }
+.badge-cancelado { background: #B71C1C; color: white; font-weight: 700; }
+
+.freq-badge {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.freq-mensual { background: var(--freq-mensual-bg); color: var(--freq-mensual-fg); }
+.freq-trimestral { background: var(--freq-trimestral-bg); color: var(--freq-trimestral-fg); }
+.freq-semestral { background: var(--freq-semestral-bg); color: var(--freq-semestral-fg); }
+.freq-anual { background: var(--freq-anual-bg); color: var(--freq-anual-fg); }
+.freq-contado { background: var(--freq-contado-bg); color: var(--freq-contado-fg); }
+.freq-dedauto { background: var(--freq-dedauto-bg); color: var(--freq-dedauto-fg); }
+.freq-deducciónautomática { background: var(--freq-dedauto-bg); color: var(--freq-dedauto-fg); }
+
+/* Estilos para los selects de frecuencia */
+.freq-select {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.3px;
+}
+
+.freq-select.freq-mensual { 
+  background: var(--freq-mensual-bg); 
+  color: var(--freq-mensual-fg); 
+  border-color: var(--freq-mensual-fg);
+}
+.freq-select.freq-trimestral { 
+  background: var(--freq-trimestral-bg); 
+  color: var(--freq-trimestral-fg); 
+  border-color: var(--freq-trimestral-fg);
+}
+.freq-select.freq-semestral { 
+  background: var(--freq-semestral-bg); 
+  color: var(--freq-semestral-fg); 
+  border-color: var(--freq-semestral-fg);
+}
+.freq-select.freq-anual { 
+  background: var(--freq-anual-bg); 
+  color: var(--freq-anual-fg); 
+  border-color: var(--freq-anual-fg);
+}
+.freq-select.freq-contado { 
+  background: var(--freq-contado-bg); 
+  color: var(--freq-contado-fg); 
+  border-color: var(--freq-contado-fg);
+}
+.freq-select.freq-dedauto { 
+  background: var(--freq-dedauto-bg); 
+  color: var(--freq-dedauto-fg); 
+  border-color: var(--freq-dedauto-fg);
+}
+
+.summary-section {
+  background: white;
+  border-radius: 10px;
+  padding: 24px;
+  margin-top: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid var(--gray-200);
+}
+
+.summary-section h2 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary);
+}
+
+.summary-table { width: 100%; border-collapse: collapse; }
+
+.summary-table th {
+  background: var(--gray-900);
+  color: white;
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.summary-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--gray-200);
+  font-size: 12px;
+}
+
+.summary-table td.right {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+.summary-table tr:last-child td { border-bottom: none; }
+.summary-table tr.highlight { background: var(--gray-50); font-weight: 700; }
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: var(--gray-50);
+  border-radius: 6px;
+}
+
+.legend-item { display: flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 500; }
+.legend-dot { width: 12px; height: 12px; border-radius: 2px; }
+
+input[type="date"] {
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  background: white;
+  min-width: 130px;
+  cursor: pointer;
+}
+
+input[type="date"]:focus { 
+  outline: none; 
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(46, 92, 138, 0.1);
+}
+
+/* Hacer que el ícono del calendario sea más visible */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(9, 30, 66, 0.54);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+}
+
+.modal.open { display: flex; }
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  width: min(96vw, 600px);
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 20px; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-grid .full { grid-column: 1 / -1; }
+
+.form-field label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 4px;
+}
+
+.form-field input, .form-field select {
+  width: 100%;
+  border: 1px solid var(--gray-300);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+.form-field input:focus, .form-field select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(46, 92, 138, 0.1);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-200);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page.active { animation: fadeIn 0.3s ease-out; }
+
+/* === MÓDULO CLIENTES === */
+.clientes-toolbar { display:flex;gap:12px;align-items:center;padding:16px 24px;background:white;border-bottom:1px solid var(--gray-200);flex-wrap:wrap; }
+.clientes-toolbar input { flex:1;min-width:220px;padding:8px 12px;border:1px solid var(--gray-300);border-radius:6px;font-size:13px; }
+.clientes-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;padding:24px; }
+.cliente-card { background:white;border:1px solid var(--gray-200);border-radius:8px;padding:16px;transition:box-shadow .2s; }
+.cliente-card:hover { box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+.cli-cedula { font-size:11px;color:var(--gray-700);font-family:'JetBrains Mono',monospace;margin-bottom:4px; }
+.cli-nombre { font-size:15px;font-weight:700;color:var(--gray-900);margin-bottom:10px; }
+.cli-row { display:flex;align-items:center;gap:8px;font-size:12px;color:var(--gray-700);margin:4px 0; }
+.cli-polizas { margin-top:10px;padding-top:10px;border-top:1px solid var(--gray-200);font-size:11px;color:var(--gray-700); }
+.cli-actions { display:flex;gap:6px;margin-top:10px;flex-wrap:wrap; }
+.cli-actions button { flex:1;padding:7px 4px;border-radius:4px;font-size:11px;font-weight:600;cursor:pointer;transition:all .2s;border:1px solid; }
+.btn-cli-wa { background:#e8fdf0;border-color:#25D366!important;color:#128C7E; }
+.btn-cli-wa:hover { background:#25D366;color:white; }
+.btn-cli-mail { background:#e8f0fe;border-color:var(--primary)!important;color:var(--primary); }
+.btn-cli-mail:hover { background:var(--primary);color:white; }
+.btn-cli-edit { background:var(--gray-100);border-color:var(--gray-300)!important;color:var(--gray-700); }
+.btn-cli-edit:hover { background:var(--gray-200); }
+.btn-cli-del { background:#fff0ee;border-color:var(--danger)!important;color:var(--danger);flex:0!important;padding:7px 10px!important; }
+.btn-cli-del:hover { background:var(--danger);color:white; }
+.clientes-empty { text-align:center;padding:60px 24px;color:var(--gray-700);grid-column:1/-1; }
+.clientes-empty .emp-icon { font-size:48px;margin-bottom:12px; }
+.buscar-cliente-btn { background:var(--gray-100);border:1px dashed var(--gray-300);border-radius:6px;padding:8px 12px;cursor:pointer;font-size:12px;color:var(--primary);font-weight:600;transition:all .2s;width:100%;text-align:left;margin-top:4px; }
+.buscar-cliente-btn:hover { background:#e8f0fe;border-color:var(--primary); }
+.cliente-ligado { background:#E3FCEF;border:1px solid #00875A;border-radius:6px;padding:8px 12px;font-size:12px;display:flex;justify-content:space-between;align-items:center;margin-top:4px; }
+.cliente-ligado .quitar { cursor:pointer;color:var(--danger);font-weight:700; }
+.modal-buscar-cliente { max-width:480px; }
+.lista-busqueda-clientes { max-height:300px;overflow-y:auto;margin-top:12px; }
+.item-cliente-busqueda { padding:10px 12px;border-bottom:1px solid var(--gray-200);cursor:pointer;transition:background .15s;font-size:13px; }
+.item-cliente-busqueda:hover { background:#e8f0fe; }
+.item-cliente-busqueda .ced { font-size:11px;color:var(--gray-700); }
+.polizas-aviso-list { max-height:280px;overflow-y:auto;margin:12px 0; }
+.poliza-aviso-item { display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--gray-200);font-size:12px; }
+.poliza-aviso-item input[type=checkbox] { width:16px;height:16px;cursor:pointer; }
+.poliza-aviso-item .pol-info { flex:1; }
+.poliza-aviso-item .pol-venc { font-size:11px;color:var(--danger);font-weight:600; }
+#modal-buscar-cli { z-index:2000; }
+#modal-cliente { z-index:2000; }
+
+/* Selector de meses en header - forzar visibilidad del texto */
+#selector-mes {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+  opacity: 1 !important;
+}
+
+#selector-mes option {
+  background: #1e3f5a !important;
+  color: white !important;
+}
+
+#selector-mes:hover {
+  background: rgba(255,255,255,0.3) !important;
+}
+
+</style>
+</head>
+<body>
+
+<header style="display:flex;justify-content:space-between;align-items:center;padding:0 16px;gap:10px;flex-wrap:wrap;">
+  <div><h1>🛡️ Control de Comisiones 2026</h1><div class="subtitle" id="current-date"></div></div>
+  <div style="display:flex;gap:8px;align-items:center;">
+    <button onclick="cambiarTab('dashboard', document.querySelector('.tab-btn'))" 
+            style="background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.5);color:white;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;white-space:nowrap;transition:all 0.2s;"
+            onmouseover="this.style.background='rgba(255,255,255,0.3)'"
+            onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+      🏠 Dashboard
+    </button>
+    <select id="selector-mes" onchange="cambiarMesDesdeSelector(this.value)" 
+            style="background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.5);color:white;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;outline:none;appearance:none;-webkit-appearance:none;-moz-appearance:none;padding-right:30px;background-image:url('data:image/svg+xml;utf8,<svg fill=\"white\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg"><path d=\"M7 10l5 5 5-5z\"/></svg>');background-repeat:no-repeat;background-position:right 8px center;background-size:20px;">
+      <option value="" style="background:#1e3f5a;color:white;">📅 Seleccionar mes...</option>
+      <option value="enero" style="background:#1e3f5a;color:white;">Enero</option>
+      <option value="febrero" style="background:#1e3f5a;color:white;">Febrero</option>
+      <option value="marzo" style="background:#1e3f5a;color:white;">Marzo</option>
+      <option value="abril" style="background:#1e3f5a;color:white;">Abril</option>
+      <option value="mayo" style="background:#1e3f5a;color:white;">Mayo</option>
+      <option value="junio" style="background:#1e3f5a;color:white;">Junio</option>
+      <option value="julio" style="background:#1e3f5a;color:white;">Julio</option>
+      <option value="agosto" style="background:#1e3f5a;color:white;">Agosto</option>
+      <option value="septiembre" style="background:#1e3f5a;color:white;">Septiembre</option>
+      <option value="octubre" style="background:#1e3f5a;color:white;">Octubre</option>
+      <option value="noviembre" style="background:#1e3f5a;color:white;">Noviembre</option>
+      <option value="diciembre" style="background:#1e3f5a;color:white;">Diciembre</option>
+    </select>
+    <button onclick="cambiarTab('clientes', document.querySelector('.tab-btn'))" 
+            style="background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.5);color:white;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;white-space:nowrap;transition:all 0.2s;"
+            onmouseover="this.style.background='rgba(255,255,255,0.3)'"
+            onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+      👥 Clientes
+    </button>
+  </div>
+  <div style="flex:1;max-width:280px;position:relative;">
+    <input type="text" id="busq-global" placeholder="🔍 Buscar en todos los meses..."
+      oninput="buscarGlobal(this.value)"
+      style="width:100%;padding:7px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.4);background:rgba(255,255,255,0.15);color:white;font-size:12px;outline:none;box-sizing:border-box;">
+    <div id="resultado-global" style="display:none;position:absolute;top:105%;left:0;right:0;background:white;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.2);z-index:3000;max-height:320px;overflow-y:auto;"></div>
+  </div>
+  <div style="display:flex;gap:8px;">
+    <button onclick="generarTodasLasRecurrencias()" style="background:#FF9800;border:2px solid #F57C00;color:white;padding:10px 20px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:700;box-shadow:0 2px 8px rgba(255,152,0,0.4);">🔁 GENERAR RECURRENCIAS</button>
+    <button onclick="exportarDatos()" style="background:#4CAF50;border:1px solid #45a049;color:white;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600;">💾 Exportar</button>
+    <button onclick="if(confirm('⚠️ Reiniciar sistema?')){limpiarYCargarEjemplo();}" style="background:#FF5722;border:1px solid #E64A19;color:white;padding:6px 10px;border-radius:6px;cursor:pointer;font-size:11px;font-weight:600;">🔄 Reiniciar</button>
+  </div>
+</header>
+
+<div class="tab-bar" style="display:none;">
+  <button class="tab-btn active" onclick="cambiarTab('enero', this)">📅 Enero</button>
+  <button class="tab-btn" onclick="cambiarTab('febrero', this)">📅 Febrero</button>
+  <button class="tab-btn" onclick="cambiarTab('marzo', this)">📅 Marzo</button>
+  <button class="tab-btn" onclick="cambiarTab('abril', this)">📅 Abril</button>
+  <button class="tab-btn" onclick="cambiarTab('mayo', this)">📅 Mayo</button>
+  <button class="tab-btn" onclick="cambiarTab('junio', this)">📅 Junio</button>
+  <button class="tab-btn" onclick="cambiarTab('julio', this)">📅 Julio</button>
+  <button class="tab-btn" onclick="cambiarTab('agosto', this)">📅 Agosto</button>
+  <button class="tab-btn" onclick="cambiarTab('septiembre', this)">📅 Septiembre</button>
+  <button class="tab-btn" onclick="cambiarTab('octubre', this)">📅 Octubre</button>
+  <button class="tab-btn" onclick="cambiarTab('noviembre', this)">📅 Noviembre</button>
+  <button class="tab-btn" onclick="cambiarTab('diciembre', this)">📅 Diciembre</button>
+  <button class="tab-btn" onclick="cambiarTab('dashboard', this)">📊 Dashboard</button>
+  <button class="tab-btn" onclick="cambiarTab('clientes', this)">👥 Clientes</button>
+</div>
+
+<div class="page active" id="page-enero"></div>
+<div class="page" id="page-febrero"></div>
+<div class="page" id="page-marzo"></div>
+<div class="page" id="page-abril"></div>
+<div class="page" id="page-mayo"></div>
+<div class="page" id="page-junio"></div>
+<div class="page" id="page-julio"></div>
+<div class="page" id="page-agosto"></div>
+<div class="page" id="page-septiembre"></div>
+<div class="page" id="page-octubre"></div>
+<div class="page" id="page-noviembre"></div>
+<div class="page" id="page-diciembre"></div>
+<div class="page" id="page-dashboard"></div>
+<div class="page" id="page-clientes"></div>
+
+<!-- MODAL CLIENTE -->
+<div class="modal" id="modal-cliente">
+  <div class="modal-content">
+    <h2 id="modal-cliente-titulo">Nuevo Cliente</h2>
+    <div class="form-grid">
+      <div class="form-field full"><label>Cedula / RUC *</label><input type="text" id="fc-cedula" placeholder="Ej: 1-0234-0567"></div>
+      <div class="form-field"><label>Nombre *</label><input type="text" id="fc-nombre" placeholder="Primer nombre"></div>
+      <div class="form-field"><label>Primer Apellido *</label><input type="text" id="fc-ap1" placeholder="Primer apellido"></div>
+      <div class="form-field full"><label>Segundo Apellido</label><input type="text" id="fc-ap2" placeholder="Segundo apellido"></div>
+      <div class="form-field"><label>Telefono / WhatsApp</label><input type="text" id="fc-tel" placeholder="Ej: 8888-8888"></div>
+      <div class="form-field"><label>Correo Electronico</label><input type="email" id="fc-email" placeholder="correo@ejemplo.com"></div>
+      <div class="form-field full"><label>Observaciones</label><input type="text" id="fc-obs" placeholder="Notas adicionales..."></div>
+    </div>
+    <div class="modal-buttons">
+      <button class="btn" onclick="cerrarModalCliente()">Cancelar</button>
+      <button class="btn success" onclick="guardarCliente()">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL BUSCAR CLIENTE -->
+<div class="modal" id="modal-buscar-cli">
+  <div class="modal-content modal-buscar-cliente">
+    <h2>Buscar Cliente</h2>
+    <p style="font-size:12px;color:var(--gray-700);margin:4px 0 8px;">Busca por nombre o cedula. Si es nuevo, crealo desde aqui.</p>
+    <input type="text" id="input-buscar-cli" placeholder="Nombre o cedula..." oninput="filtrarListaClientes(this.value)"
+      style="width:100%;padding:10px;border:1px solid var(--gray-300);border-radius:6px;font-size:13px;margin-bottom:4px;box-sizing:border-box;">
+    <div class="lista-busqueda-clientes" id="lista-buscar-cli"></div>
+    <div class="modal-buttons"><button class="btn" onclick="cerrarModalBuscarCli()">Continuar sin vincular</button></div>
+  </div>
+</div>
+
+<!-- MODAL AVISAR -->
+<div class="modal" id="modal-avisar">
+  <div class="modal-content">
+    <h2 id="avisar-titulo">Enviar Recordatorio</h2>
+    <div id="avisar-cliente-info" style="background:var(--gray-100);padding:12px;border-radius:6px;margin-bottom:12px;font-size:13px;"></div>
+    <p style="font-size:13px;font-weight:600;margin-bottom:8px;">Selecciona las polizas a incluir:</p>
+    <div class="polizas-aviso-list" id="avisar-polizas-list"></div>
+    <div style="background:#FFF4E6;padding:12px;border-radius:6px;margin:12px 0;font-size:12px;">
+      <strong>Vista previa del mensaje:</strong>
+      <div id="avisar-preview" style="margin-top:8px;white-space:pre-wrap;font-family:monospace;font-size:11px;"></div>
+    </div>
+    <div class="modal-buttons">
+      <button class="btn" onclick="cerrarModalAvisar()">Cancelar</button>
+      <button class="btn" id="btn-enviar-wa" onclick="enviarAvisoWA()" style="background:#25D366;color:white;border:none;">Enviar WhatsApp</button>
+      <button class="btn" id="btn-enviar-mail" onclick="enviarAvisoEmail()" style="background:var(--primary);color:white;border:none;">Enviar Email</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL CONFIGURACIÓN PERFIL AGENTE -->
+<div class="modal" id="modal-config-perfil">
+  <div class="modal-content" style="max-width: 600px;">
+    <h2>👤 Mi Perfil de Agente</h2>
+    <div style="background: #E3FCEF; border-left: 4px solid #00875A; padding: 12px; margin-bottom: 16px; border-radius: 4px; font-size: 13px;">
+      💡 <strong>Información visible:</strong> Esta información se mostrará en el Dashboard y podrá usarse en reportes y documentos.
+    </div>
+    <div class="form-grid">
+      <div class="form-field full" style="text-align: center;">
+        <label>Foto de Perfil / Logo</label>
+        <div style="margin: 12px 0;">
+          <div id="preview-foto" style="width: 100px; height: 100px; border-radius: 50%; background: var(--gray-200); display: inline-flex; align-items: center; justify-content: center; font-size: 48px; font-weight: 700; color: var(--gray-700); overflow: hidden; border: 3px solid var(--gray-300);">
+            ${localStorage.getItem('agente_foto') ? 
+              '<img src="' + localStorage.getItem('agente_foto') + '" style="width: 100%; height: 100%; object-fit: cover;">' : 
+              (localStorage.getItem('agente_nombre') || '?')[0].toUpperCase()}
+          </div>
+        </div>
+        <input type="file" id="config-agente-foto" accept="image/*" onchange="previsualizarFoto(this)" style="display: none;">
+        <div style="display: flex; gap: 8px; justify-content: center;">
+          <button type="button" onclick="document.getElementById('config-agente-foto').click()" class="btn" style="font-size: 12px; padding: 8px 16px;">
+            📷 Subir Foto
+          </button>
+          ${localStorage.getItem('agente_foto') ? '<button type="button" onclick="eliminarFoto()" class="btn danger" style="font-size: 12px; padding: 8px 16px;">🗑️ Eliminar</button>' : ''}
+        </div>
+        <small style="color: var(--gray-700); font-size: 11px; display: block; margin-top: 6px;">
+          Formatos: JPG, PNG. Tamaño recomendado: 200x200px
+        </small>
+      </div>
+      <div class="form-field full">
+        <label>Nombre Completo *</label>
+        <input type="text" id="config-agente-nombre" placeholder="Andrés De Camino Para" style="font-size: 14px; padding: 12px;">
+      </div>
+      <div class="form-field">
+        <label>Teléfono</label>
+        <input type="text" id="config-agente-telefono" placeholder="8702-2141" style="font-size: 14px; padding: 12px;">
+      </div>
+      <div class="form-field">
+        <label>Correo Electrónico</label>
+        <input type="email" id="config-agente-email" placeholder="correo@ejemplo.com" style="font-size: 14px; padding: 12px;">
+      </div>
+      <div class="form-field full">
+        <label>Dirección</label>
+        <input type="text" id="config-agente-direccion" placeholder="San José, Costa Rica" style="font-size: 14px; padding: 12px;">
+      </div>
+      <div class="form-field full">
+        <label>Sitio Web (opcional)</label>
+        <input type="url" id="config-agente-web" placeholder="https://ejemplo.com" style="font-size: 14px; padding: 12px;">
+      </div>
+    </div>
+    <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--gray-300);">
+      <button class="btn" onclick="cerrarConfigPerfil()">Cancelar</button>
+      <button class="btn success" onclick="guardarConfigPerfil()">💾 Guardar Perfil</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL CONFIGURACIÓN CORREDORA -->
+<div class="modal" id="modal-config-corredora">
+  <div class="modal-content" style="max-width: 500px;">
+    <h2>⚙️ Configuración de Comisiones</h2>
+    <div style="background: #E3FCEF; border-left: 4px solid #00875A; padding: 12px; margin-bottom: 16px; border-radius: 4px; font-size: 13px;">
+      💡 <strong>Porcentaje por defecto:</strong> Este será el % de corredora que se aplicará automáticamente a todas las pólizas nuevas. Puedes cambiarlo individualmente en cada póliza si es necesario.
+    </div>
+    <div class="form-field">
+      <label>% Corredora por defecto</label>
+      <input type="number" id="config-corredora-default" step="0.01" min="0" max="100" placeholder="Ej: 20" 
+             style="font-size: 14px; padding: 12px; width: 100%;">
+      <small style="color: var(--gray-700); font-size: 11px; display: block; margin-top: 6px;">
+        Si la corredora se queda con el 20%, tú recibes el 80%. Si se queda con 40%, recibes 60%, etc.
+      </small>
+    </div>
+    <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--gray-300);">
+      <button class="btn" onclick="cerrarConfigCorredora()">Cancelar</button>
+      <button class="btn success" onclick="guardarConfigCorredora()">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL PÓLIZA -->
+<div class="modal" id="modal-poliza">
+  <div class="modal-content">
+    <h2 id="modal-title">Nueva Póliza</h2>
+    <div style="background: #E3FCEF; border-left: 4px solid #00875A; padding: 12px; margin-bottom: 16px; border-radius: 4px; font-size: 12px;">
+      💡 <strong>Formato de fechas:</strong> DD/MM/AAAA (ejemplo: 15/02/2026). En la tabla puedes usar el botón "📅 Hoy" para marcar como pagado hoy.
+    </div>
+    <div class="form-grid">
+      <div class="form-field">
+        <label>Aseguradora *</label>
+        <select id="f-aseg">
+          <option value="">Seleccionar...</option>
+          <option>QUALITAS</option>
+          <option>INS</option>
+          <option>ASSA</option>
+          <option>MAPFRE</option>
+          <option>MNK</option>
+          <option>PALIC</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Tipo</label>
+        <select id="f-tipo">
+          <option value="">(REG)</option>
+          <option>(NVA)</option>
+          <option>(ATR)</option>
+          <option>(ADL)</option>
+        </select>
+      </div>
+      <div class="form-field full">
+        <label>Cliente vinculado <span style="font-weight:400;color:var(--gray-700)">(opcional)</span></label>
+        <div id="cliente-ligado-display">
+          <button type="button" class="buscar-cliente-btn" onclick="abrirModalBuscarCli()">Buscar y vincular cliente...</button>
+        </div>
+        <input type="hidden" id="f-cliente-cedula">
+      </div>
+      <div class="form-field full">
+        <label>Nombre del Asegurado *</label>
+        <input type="text" id="f-nombre" placeholder="Nombre completo">
+      </div>
+      <div class="form-field">
+        <label>N° Póliza *</label>
+        <input type="text" id="f-poliza">
+      </div>
+      <div class="form-field">
+        <label>Frecuencia</label>
+        <select id="f-frec">
+          <option>MENSUAL</option>
+          <option>TRIMESTRAL</option>
+          <option>SEMESTRAL</option>
+          <option>ANUAL</option>
+          <option>CONTADO</option>
+          <option>DEDUCCIÓN AUTOMÁTICA</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Fecha Vencimiento</label>
+        <input type="text" id="f-venc" placeholder="DD/MM/AAAA" oninput="autoDetectarMes(this.value)" style="font-size: 13px; padding: 10px;" onblur="validarFechaCR(this)">
+      </div>
+      <div class="form-field">
+        <label>Fecha Pago</label>
+        <div style="display: flex; gap: 8px;">
+          <input type="text" id="f-pago" placeholder="DD/MM/AAAA (ej: 15/02/2026)" style="font-size: 13px; padding: 10px; flex: 1;" onblur="validarFechaCR(this)">
+          <button type="button" class="btn success" onclick="const h=new Date();document.getElementById('f-pago').value=String(h.getDate()).padStart(2,'0')+'/'+String(h.getMonth()+1).padStart(2,'0')+'/'+h.getFullYear();" style="white-space: nowrap;">📅 Hoy</button>
+        </div>
+      </div>
+      <div class="form-field">
+        <label>Moneda</label>
+        <select id="f-moneda">
+          <option>CRC</option>
+          <option>USD</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Monto Bruto</label>
+        <input type="number" id="f-monto" step="0.01" min="0">
+      </div>
+      <div class="form-field">
+        <label>IVA</label>
+        <select id="f-iva">
+          <option value="0.13">13%</option>
+          <option value="0.04">4%</option>
+          <option value="0.02">2%</option>
+          <option value="0">0%</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Comisión %</label>
+        <input type="number" id="f-com" step="0.01" min="0" max="100" placeholder="Ej: 15" 
+               title="Ingrese el porcentaje de comisión (ejemplo: 15 para 15%)"
+               style="font-size: 13px; padding: 10px;">
+      </div>
+      <div class="form-field">
+        <label>% Corredora <button type="button" onclick="abrirConfigCorredora()" style="background:none;border:none;color:var(--primary);cursor:pointer;font-size:11px;padding:2px 6px;text-decoration:underline;" title="Configurar % por defecto">⚙️ Config</button></label>
+        <input type="number" id="f-corredora" step="0.01" min="0" max="100" placeholder="Ej: 20" 
+               title="Porcentaje que se queda la corredora (ejemplo: 20 para 20%)"
+               style="font-size: 13px; padding: 10px;">
+      </div>
+      <div class="form-field">
+        <label>Mes</label>
+        <select id="f-mes">
+          <option value="enero">Enero</option>
+          <option value="febrero">Febrero</option>
+          <option value="marzo">Marzo</option>
+          <option value="abril">Abril</option>
+          <option value="mayo">Mayo</option>
+          <option value="junio">Junio</option>
+          <option value="julio">Julio</option>
+          <option value="agosto">Agosto</option>
+          <option value="septiembre">Septiembre</option>
+          <option value="octubre">Octubre</option>
+          <option value="noviembre">Noviembre</option>
+          <option value="diciembre">Diciembre</option>
+        </select>
+      </div>
+    </div>
+    <div class="modal-buttons">
+      <button class="btn" onclick="cerrarModal()">Cancelar</button>
+      <button class="btn success" onclick="guardarPoliza()">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const DATOS_INICIALES = {
+  enero: [],
+  febrero: [{"aseg": "QUALITAS", "tipo": "", "nombre": "DE MEZERVILLE FERRETO NICOLE", "poliza": "450736", "frec": "MENSUAL", "venc": "2026-01-02", "pago": "2026-02-11", "moneda": "CRC", "monto": 16334.14, "iva": 0.13, "com": 0.13}, {"aseg": "INS", "tipo": "(REG)", "nombre": "MARTINEZ HIDALG O MNG S.A.", "poliza": "RT 10287713 ", "frec": "TRIMESTRAL", "venc": "2026-02-01", "pago": "2026-02-02", "moneda": "CRC", "monto": 2401745.0, "iva": 0.0, "com": 0.05}, {"aseg": "QUALITAS", "tipo": "(ATR)", "nombre": "CERDAS ARIAS JOSUE MAURICIO", "poliza": "439278", "frec": "TRIMESTRAL", "venc": "2026-01-29", "pago": "2026-01-01", "moneda": "CRC", "monto": 49649.36, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "(ATR)", "nombre": "MORALES QUIROS ALEXIS", "poliza": "473739", "frec": "TRIMESTRAL", "venc": "2026-01-30", "pago": "2026-02-01", "moneda": "CRC", "monto": 85516.29, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "461291", "frec": "TRIMESTRAL", "venc": "2026-02-02", "pago": "2026-02-11", "moneda": "CRC", "monto": 74015.7, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "461292", "frec": "TRIMESTRAL", "venc": "2026-02-02", "pago": "2026-02-02", "moneda": "CRC", "monto": 61140.8, "iva": 0.13, "com": 0.13}, {"aseg": "MAPFRE", "tipo": "", "nombre": "MIRANDA CASCANTE XINIA", "poliza": "2012500003621", "frec": "SEMESTRAL", "venc": "2026-02-02", "pago": "2026-02-09", "moneda": "CRC", "monto": 119245.55, "iva": 0.13, "com": 0.19}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORGAN FRANCIS AISHA KAMARIA", "poliza": "441152", "frec": "MENSUAL", "venc": "2026-02-02", "pago": "2026-02-11", "moneda": "CRC", "monto": 50458.32, "iva": 0.13, "com": 0.13}, {"aseg": "INS", "tipo": "", "nombre": "VALVERDE HERRERA ALISON MARIA", "poliza": "2159764", "frec": "MENSUAL", "venc": "2026-02-02", "pago": "", "moneda": "CRC", "monto": 27289.0, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "GUILLEN BADILLA RANDALL", "poliza": "442456", "frec": "MENSUAL", "venc": "2026-02-02", "pago": "", "moneda": "CRC", "monto": 48437.42, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ABARCA MONGE ANA ELIETTE DE JESUS", "poliza": "478434", "frec": "SEMESTRAL", "venc": "2026-02-03", "pago": "2026-02-05", "moneda": "CRC", "monto": 148009.51, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "TRINIDAD Y CONCEPCION LTD", "poliza": "478435", "frec": "MENSUAL", "venc": "2026-02-04", "pago": "2026-02-08", "moneda": "CRC", "monto": 79384.4, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "REYES BRAVO JOSE MANUEL", "poliza": "441062", "frec": "MENSUAL", "venc": "2026-02-04", "pago": "2026-02-02", "moneda": "CRC", "monto": 47327.98, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "MORA VEGA ROLANDO JESUS", "poliza": "441462", "frec": "TRIMESTRAL", "venc": "2026-02-04", "pago": "2026-02-05", "moneda": "CRC", "monto": 104666.96, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "461539", "frec": "MENSUAL", "venc": "2026-02-04", "pago": "2026-02-08", "moneda": "CRC", "monto": 67096.61, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "BALTODANO CERVANTES ROSALINDA", "poliza": "466838", "frec": "TRIMESTRAL", "venc": "2026-02-05", "pago": "2026-02-11", "moneda": "CRC", "monto": 64199.94, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "DE CAMINO MOYA MERITXELL", "poliza": "477732", "frec": "MENSUAL", "venc": "2026-02-05", "pago": "2026-02-05", "moneda": "CRC", "monto": 22556.4, "iva": 0.13, "com": 0.13}, {"aseg": "ASSA", "tipo": "(REG)", "nombre": "3-102-934254 SRL", "poliza": "02B60283", "frec": "MENSUAL", "venc": "2026-02-05", "pago": "2026-02-06", "moneda": "CRC", "monto": 44847.67, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "461898", "frec": "MENSUAL", "venc": "2026-02-06", "pago": "", "moneda": "CRC", "monto": 73326.36, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "RODRIGUEZ MORALES SANTIAGO", "poliza": "478574", "frec": "SEMESTRAL", "venc": "2026-02-06", "pago": "2026-02-02", "moneda": "CRC", "monto": 135374.42, "iva": 0.13, "com": 0.13}, {"aseg": "ASSA", "tipo": "", "nombre": "ZUNIGA CASCO GLENDA ELIZABETH", "poliza": "02B59164", "frec": "MENSUAL", "venc": "2026-02-06", "pago": "", "moneda": "CRC", "monto": 31682.36, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "FRENI MENDEZ JOSE DAVID", "poliza": "478150", "frec": "MENSUAL", "venc": "2026-06-02", "pago": "2026-02-06", "moneda": "CRC", "monto": 94889.5, "iva": 0.13, "com": 0.07}, {"aseg": "INS", "tipo": "", "nombre": "MORA COLOCHO RODRIGO", "poliza": "21772", "frec": "MENSUAL", "venc": "2026-06-02", "pago": "", "moneda": "CRC", "monto": 38610.0, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "COTO MENDEZ PAOLA VANNESA", "poliza": "440952", "frec": "TRIMESTRAL", "venc": "2026-02-07", "pago": "2026-02-07", "moneda": "CRC", "monto": 73849.61, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ANTUNEZ OLIVA MARIA JOSE", "poliza": "477712", "frec": "TRIMESTRAL", "venc": "2026-02-07", "pago": "2026-02-13", "moneda": "CRC", "monto": 111628.02, "iva": 0.13, "com": 0.15}, {"aseg": "INS", "tipo": "", "nombre": "ANTUNEZ OLIVA JOSE ALBERTO", "poliza": "409", "frec": "ANUAL", "venc": "07-20-2026", "pago": "2026-02-13", "moneda": "CRC", "monto": 45749.0, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "SERVICIOS TECNICOS VIACHICA S.A.", "poliza": "453024", "frec": "MENSUAL", "venc": "2026-02-08", "pago": "", "moneda": "CRC", "monto": 59722.35, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "SERVICIOS TECNICOS VIACHICA S.A.", "poliza": "453024", "frec": "MENSUAL", "venc": "2026-02-08", "pago": "", "moneda": "CRC", "monto": 3165.3, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "MENDEZ FALLAS JOSE PABLO", "poliza": "467023", "frec": "MENSUAL", "venc": "2026-02-08", "pago": "2026-02-07", "moneda": "CRC", "monto": 54773.52, "iva": 0.13, "com": 0.13}, {"aseg": "ASSA", "tipo": "", "nombre": "MELENDEZ MUÑOZ BRYAN", "poliza": "02B58771", "frec": "MENSUAL", "venc": "2026-02-08", "pago": "2026-02-06", "moneda": "CRC", "monto": 38045.33, "iva": 0.13, "com": 0.15}, {"aseg": "MNK", "tipo": "", "nombre": "DATAR S.A.", "poliza": "APTV-44036", "frec": "MENSUAL", "venc": "2026-02-08", "pago": "2026-02-08", "moneda": "USD", "monto": 314.6, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "CERROS VERDES DE SAN JOSE SOCIEDAD ANONIMA", "poliza": "441183", "frec": "MENSUAL", "venc": "2026-02-09", "pago": "", "moneda": "CRC", "monto": 39223.9, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "AYON OLIVAS MURELL SOCYELB", "poliza": "454361", "frec": "MENSUAL", "venc": "2026-02-09", "pago": "2026-02-03", "moneda": "CRC", "monto": 70365.19, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "AYON OLIVAS MURELL SOCYELB", "poliza": "454361", "frec": "MENSUAL", "venc": "2026-02-09", "pago": "2026-02-04", "moneda": "CRC", "monto": 5629.21, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "QUESADA VARGAS PAMELA ANDREA", "poliza": "454364", "frec": "MENSUAL", "venc": "2026-02-09", "pago": "", "moneda": "CRC", "monto": 190450.01, "iva": 0.13, "com": 0.15}, {"aseg": "INS", "tipo": "", "nombre": "CHAVARRIA ROJAS CARLOS ALBERTO", "poliza": "2199249", "frec": "MENSUAL", "venc": "2026-02-09", "pago": "", "moneda": "CRC", "monto": 55564.0, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "MARTINEZ HIDALGO MNG SOCIEDAD ANONIMA", "poliza": "466594", "frec": "TRIMESTRAL", "venc": "2026-02-10", "pago": "2026-02-12", "moneda": "CRC", "monto": 30516.34, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MAYKEL AMADOR MARTINEZ PEREZ", "poliza": "474531", "frec": "TRIMESTRAL", "venc": "10-022026", "pago": "2026-02-06", "moneda": "CRC", "monto": 66054.53, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "RIVERA DELGADO DENNIS EDUARDO", "poliza": "476231", "frec": "MENSUAL", "venc": "2026-02-10", "pago": "", "moneda": "CRC", "monto": 108225.24, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "RICHMOND GUZMAN LUIS ALEXANDER", "poliza": "477807", "frec": "MENSUAL", "venc": "2026-02-10", "pago": "", "moneda": "CRC", "monto": 77085.8, "iva": 0.13, "com": 0.15}, {"aseg": "ASSA", "tipo": "", "nombre": "VARGAS SOTO SHILENNY VALERIA", "poliza": "02B53294", "frec": "MENSUAL", "venc": "2026-02-10", "pago": "", "moneda": "CRC", "monto": 356587.49, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ALFARO PEREZ LUIS", "poliza": "478155", "frec": "MENSUAL", "venc": "2026-02-10", "pago": "", "moneda": "CRC", "monto": 185341.33, "iva": 0.13, "com": 0.15}, {"aseg": "INS", "tipo": "(REG)", "nombre": "VIQUEZ GOMEZ JOSUE", "poliza": "2190873", "frec": "MENSUAL", "venc": "2026-02-10", "pago": "2026-02-09", "moneda": "CRC", "monto": 46177.0, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ALVAREZ RIVERA JOSSETH DEL MILAGRO", "poliza": "441501", "frec": "MENSUAL", "venc": "2026-02-11", "pago": "", "moneda": "CRC", "monto": 62048.15, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "RODRIGUEZ CARRANZA MARJORIE OLIVA DEL CARMEN", "poliza": "453395", "frec": "MENSUAL", "venc": "2026-02-12", "pago": "2026-02-06", "moneda": "CRC", "monto": 170670.96, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "CHAMBERS RIVAS NURIA", "poliza": "478534", "frec": "TRIMESTRAL", "venc": "2026-02-13", "pago": "2026-02-06", "moneda": "CRC", "monto": 80096.07, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "NAVARRO RODRIGUEZ ELBER EDUARDO", "poliza": "441200", "frec": "MENSUAL", "venc": "2026-02-12", "pago": "", "moneda": "CRC", "monto": 68285.96, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "PARDO ALVAREZ ANDRES", "poliza": "453399", "frec": "MENSUAL", "venc": "2026-02-12", "pago": "", "moneda": "CRC", "monto": 121713.19, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "463167", "frec": "MENSUAL", "venc": "2026-02-12", "pago": "", "moneda": "CRC", "monto": 62454.94, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "PEREZ CASTRO RAFAEL ANGEL", "poliza": "467211", "frec": "MENSUAL", "venc": "2026-02-15", "pago": "", "moneda": "CRC", "monto": 62859.61, "iva": 0.13, "com": 0.15}, {"aseg": "ASSA", "tipo": "", "nombre": "FERNANDEZ BOLAÑOS MICHAEL EDUARDO", "poliza": "02B52416", "frec": "MENSUAL", "venc": "2026-02-12", "pago": "2026-02-12", "moneda": "CRC", "monto": 46983.51, "iva": 0.13, "com": 0.15}, {"aseg": "ASSA", "tipo": "", "nombre": "MORA SOLIS VIVIAN", "poliza": "02B55362", "frec": "MENSUAL", "venc": "2026-02-12", "pago": "2026-02-12", "moneda": "CRC", "monto": 23985.36, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "CORRALES FLORES JOSE PABLO", "poliza": "453532", "frec": "TRIMESTRAL", "venc": "2026-02-13", "pago": "2026-02-11", "moneda": "CRC", "monto": 83226.73, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "DELGADO VALVERDE IVAN GERARDO", "poliza": "454379", "frec": "SEMESTRAL", "venc": "13/02/2026", "pago": "2026-02-09", "moneda": "CRC", "monto": 204383.19, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "LUIS FERNANDO CESPEDES SANCHEZ", "poliza": "475015", "frec": "MENSUAL", "venc": "13/02/2026", "pago": "", "moneda": "CRC", "monto": 62671.77, "iva": 0.13, "com": 0.15}, {"aseg": "ASSA", "tipo": "", "nombre": "MOLINA CHACON JAIRO", "poliza": "02B53334", "frec": "MENSUAL", "venc": "13/02/2026", "pago": "", "moneda": "CRC", "monto": 144833.66, "iva": 0.13, "com": 0.15}, {"aseg": "INS", "tipo": "", "nombre": "ARRIETA ALVAREZ DANNY ALBERTO", "poliza": "2183916", "frec": "MENSUAL", "venc": "13/02/2026", "pago": "", "moneda": "CRC", "monto": 45147.0, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "BIENESTAR PARA TODOS S.A", "poliza": "441212", "frec": "MENSUAL", "venc": "14/02/2026", "pago": "", "moneda": "CRC", "monto": 28737.2, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "BIENESTAR PARA TODOS S.A", "poliza": "441212", "frec": "MENSUAL", "venc": "2026-02-14", "pago": "", "moneda": "CRC", "monto": 2844.98, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "DURAN GUZMAN PIERRE ANYELO", "poliza": "478603", "frec": "ANUAL", "venc": "14/02/2026", "pago": "2026-02-13", "moneda": "CRC", "monto": 281934.77, "iva": 0.13, "com": 0.13}, {"aseg": "ASSA", "tipo": "", "nombre": "DE CAMINO MOYA PABLO ANDRES", "poliza": "02B58456", "frec": "MENSUAL", "venc": "14/02/2026", "pago": "", "moneda": "CRC", "monto": 45728.96, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "463902", "frec": "MENSUAL", "venc": "15/02/2026", "pago": "", "moneda": "CRC", "monto": 67453.72, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "MULTISERVICIOS JIREH MN", "poliza": "466602", "frec": "MENSUAL", "venc": "15/02/2026", "pago": "2026-02-12", "moneda": "CRC", "monto": 39721.38, "iva": 0.13, "com": 0.13}, {"aseg": "ASSA", "tipo": "", "nombre": "3-102-934689 SRL", "poliza": "02B59659", "frec": "MENSUAL", "venc": "15/02/2026", "pago": "", "moneda": "CRC", "monto": 35904.86, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "CESPEDES BARRANTES GREIVIN GERARDO", "poliza": "452775", "frec": "MENSUAL", "venc": "16/02/2026", "pago": "", "moneda": "CRC", "monto": 62565.83, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "463903", "frec": "MENSUAL", "venc": "16/02/2026", "pago": "", "moneda": "CRC", "monto": 62723.5, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "463904", "frec": "MENSUAL", "venc": "16/02/2026", "pago": "", "moneda": "CRC", "monto": 64433.49, "iva": 0.13, "com": 0.15}, {"aseg": "ASSA", "tipo": "", "nombre": "DE CAMINO VELOZO RONNIE", "poliza": "02B57329", "frec": "MENSUAL", "venc": "16/02/2026", "pago": "", "moneda": "CRC", "monto": 28785.69, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "EDGAR MESEN SANCHEZ", "poliza": "450457", "frec": "MENSUAL", "venc": "17/02/2026", "pago": "", "moneda": "CRC", "monto": 55426.56, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "BRIANS MENA CALVO", "poliza": "451100", "frec": "MENSUAL", "venc": "17/02/2026", "pago": "", "moneda": "CRC", "monto": 60654.68, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "AGUILAR RODRIGUEZ YULY ANN", "poliza": "453543", "frec": "MENSUAL", "venc": "17/02/2026", "pago": "", "moneda": "CRC", "monto": 70075.78, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "SOLANO ZECCA GABRIELA", "poliza": "454411", "frec": "MENSUAL", "venc": "17/02/2026", "pago": "", "moneda": "CRC", "monto": 66896.21, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "CARVAJAL LEDEZMA GABRIEL FRANCISCO DEL SOCORRO", "poliza": "477890", "frec": "MENSUAL", "venc": "17/02/2026", "pago": "", "moneda": "CRC", "monto": 205025.93, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "CHACON HERNANDEZ HUMBERTO JOSE DE JESUS", "poliza": "479529", "frec": "MENSUAL", "venc": "17/02/2026", "pago": "", "moneda": "CRC", "monto": 148257.0, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "CHINCHILLA CALVO RAMON FRANCISCO", "poliza": "444426", "frec": "TRIMESTRAL", "venc": "18/02/2026", "pago": "2026-02-18", "moneda": "CRC", "monto": 155693.3, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ROJAS SOLANO ALVARO GABRIEL", "poliza": "456556", "frec": "MENSUAL", "venc": "18/02/2026", "pago": "", "moneda": "CRC", "monto": 309013.94, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "464066", "frec": "MENSUAL", "venc": "18/02/2026", "pago": "", "moneda": "CRC", "monto": 74015.7, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "AGUERO RAMIREZ LUIS EDUARDO", "poliza": "477738", "frec": "MENSUAL", "venc": "18/02/2026", "pago": "", "moneda": "CRC", "monto": 88716.43, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "464158", "frec": "MENSUAL", "venc": "19/02/2026", "pago": "", "moneda": "CRC", "monto": 70399.45, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "TRINIDAD Y CONCEPCION LTD", "poliza": "478492", "frec": "MENSUAL", "venc": "19/02/2026", "pago": "", "moneda": "CRC", "monto": 86046.87, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": 3102810967, "poliza": "464544", "frec": "MENSUAL", "venc": "21/02/2026", "pago": "", "moneda": "CRC", "monto": 117432.66, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": 3102810967, "poliza": "464544", "frec": "MENSUAL", "venc": "21/02/2026", "pago": "", "moneda": "CRC", "monto": 117432.66, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "JETION DE INVERSIONES KRUMYDY SRL", "poliza": "468545", "frec": "MENSUAL", "venc": "22/02/2026", "pago": "", "moneda": "CRC", "monto": 16174.14, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ALVAREZ CHAVES LINDOR EDUARDO", "poliza": "475976", "frec": "MENSUAL", "venc": "22/02/2026", "pago": "", "moneda": "CRC", "monto": 63002.97, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "QUIROS ELIZONDO LUIS EFREN", "poliza": "477936", "frec": "MENSUAL", "venc": "22/02/2026", "pago": "", "moneda": "CRC", "monto": 191100.98, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "DANIEL DE LOS ANGELES ARIAS ZUMBADO", "poliza": "452177", "frec": "MENSUAL", "venc": "23/02/2026", "pago": "", "moneda": "CRC", "monto": 84360.77, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "BONILLA MADRIZ JESSICA MARIA", "poliza": "456592", "frec": "MENSUAL", "venc": "23/02/2026", "pago": "", "moneda": "CRC", "monto": 133990.36, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "JETION DE INVERSIONES KRUMYDY SRL", "poliza": "468546", "frec": "MENSUAL", "venc": "23/02/2026", "pago": "", "moneda": "CRC", "monto": 16174.14, "iva": 0.13, "com": 0.15}, {"aseg": "ASSA", "tipo": "", "nombre": "SANCHEZ SOLIS YENDRY CAROLAING", "poliza": "02B54442", "frec": "MENSUAL", "venc": "23/02/2026", "pago": "", "moneda": "CRC", "monto": 27083.34, "iva": 0.13, "com": 0.15}, {"aseg": "INS", "tipo": "", "nombre": "MARTINEZ GUTIERREZ MARIA LUISA", "poliza": "2183177", "frec": "MENSUAL", "venc": "23/02/2026", "pago": "", "moneda": "CRC", "monto": 25855.0, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "SANCHEZ VALERIN JONATHAN", "poliza": "441027", "frec": "MENSUAL", "venc": "24/02/2026", "pago": "", "moneda": "CRC", "monto": 99186.94, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "CARVAJAL LEDEZMA GABRIEL FRANCISCO DEL SOCORRO", "poliza": "452777", "frec": "MENSUAL", "venc": "24/02/2026", "pago": "", "moneda": "CRC", "monto": 60481.96, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "464660", "frec": "MENSUAL", "venc": "24/02/2026", "pago": "", "moneda": "CRC", "monto": 68675.9, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ALVARADO CHAVES CARLOS EDUARDO DE LOS ANGELES", "poliza": "477750", "frec": "MENSUAL", "venc": "24/02/2026", "pago": "", "moneda": "CRC", "monto": 152172.96, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "3-101-866337 SOCIEDAD ANONIMA", "poliza": "477993", "frec": "MENSUAL", "venc": "24/02/2026", "pago": "", "moneda": "CRC", "monto": 317209.02, "iva": 0.13, "com": 0.15}, {"aseg": "INS", "tipo": "", "nombre": "MARIN VALLEJOS JANNY", "poliza": "311959", "frec": "MENSUAL", "venc": "24/02/2026", "pago": "", "moneda": "CRC", "monto": 27314.0, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "JOSUE RICARDO RODRIGUEZ QUESADA", "poliza": "475402", "frec": "MENSUAL", "venc": "25/02/2026", "pago": "", "moneda": "CRC", "monto": 62061.51, "iva": 0.13, "com": 0.15}, {"aseg": "MAPFRE", "tipo": "", "nombre": "ALVARADO CHACON GUILLERMO ANTONIO", "poliza": "2012500003656", "frec": "MENSUAL", "venc": "25/02/2026", "pago": "", "moneda": "CRC", "monto": 158206.95, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "AGUERO RAMIREZ LUIS EDUARDO", "poliza": "453581", "frec": "MENSUAL", "venc": "26/02/2026", "pago": "", "moneda": "CRC", "monto": 68728.77, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ZUMQUE SRL", "poliza": "475806", "frec": "MENSUAL", "venc": "26/02/2026", "pago": "", "moneda": "CRC", "monto": 142604.08, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "RIVERA DELGADO DENNIS EDUARDO", "poliza": "476327", "frec": "MENSUAL", "venc": "26/02/2026", "pago": "", "moneda": "CRC", "monto": 108225.24, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "NAJERA MARTINEZ TONNY JAVIER", "poliza": "478648", "frec": "MENSUAL", "venc": "26/02/2026", "pago": "", "moneda": "CRC", "monto": 288143.56, "iva": 0.13, "com": 0.15}, {"aseg": "ASSA", "tipo": "", "nombre": "3102941931 SRL", "poliza": "02B58993", "frec": "MENSUAL", "venc": "26/02/2026", "pago": "", "moneda": "CRC", "monto": 119380.35, "iva": 0.13, "com": 0.15}, {"aseg": "ASSA", "tipo": "", "nombre": "CHING CALVO WALTER FREDY", "poliza": "02B59772", "frec": "TRIMESTRAL", "venc": "26/02/2026", "pago": "", "moneda": "CRC", "monto": 33069.99, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "HACKER NO TIENE JORG", "poliza": "441126", "frec": "MENSUAL", "venc": "27/02/2026", "pago": "", "moneda": "CRC", "monto": 57391.26, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "464847", "frec": "MENSUAL", "venc": "27/02/2026", "pago": "", "moneda": "CRC", "monto": 73783.79, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "475578", "frec": "MENSUAL", "venc": "27/02/2026", "pago": "", "moneda": "CRC", "monto": 70094.3, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ALVAREZ MARTINEZ YULIANA", "poliza": "476645", "frec": "MENSUAL", "venc": "27/02/2026", "pago": "", "moneda": "CRC", "monto": 111770.3, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "RIVERA DELGADO DENNIS EDUARDO", "poliza": "477773", "frec": "MENSUAL", "venc": "27/02/2026", "pago": "", "moneda": "CRC", "monto": 167186.88, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MOLINA CASTRILLO GILBERT ANTONIO", "poliza": "478404", "frec": "MENSUAL", "venc": "27/02/2026", "pago": "", "moneda": "CRC", "monto": 96635.01, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "RIVERA DELGADO DENNIS EDUARDO", "poliza": "478407", "frec": "MENSUAL", "venc": "27/02/2026", "pago": "", "moneda": "CRC", "monto": 162875.71, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "SEGURA VALVERDE KAROL YORLENY", "poliza": "441263", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "", "moneda": "CRC", "monto": 61888.26, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MONTERO PORUGUEZ MARIA GERARDINA", "poliza": "453286", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "", "moneda": "CRC", "monto": 61224.39, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MONTERO FERNANDEZ CRISTIAN ALBERTO", "poliza": "453297", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "", "moneda": "CRC", "monto": 74985.88, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "464844", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "", "moneda": "CRC", "monto": 66358.35, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "464845", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "", "moneda": "CRC", "monto": 77017.39, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "VARGAS MOSQUERA DAMARIS", "poliza": "467151", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "", "moneda": "CRC", "monto": 85413.33, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "JOSE DAVID UBAU MENOCAL", "poliza": "475609", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "", "moneda": "CRC", "monto": 52999.02, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "(ADL)", "nombre": "KOSS HERNANDEZ REBECA", "poliza": "477658", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "2026-02-11", "moneda": "CRC", "monto": 237557.35, "iva": 0.13, "com": 0.13}, {"aseg": "MAPFRE", "tipo": "", "nombre": "SANDOVAL CHINCHILLA SHIRLEY", "poliza": "2012500003556", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "", "moneda": "CRC", "monto": 18921.27, "iva": 0.13, "com": 0.15}, {"aseg": "ASSA", "tipo": "", "nombre": "QUIROS ELIZONDO ERICK JESUS", "poliza": "02B54116", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "", "moneda": "CRC", "monto": 42450.28, "iva": 0.13, "com": 0.15}, {"aseg": "ASSA", "tipo": "", "nombre": "SEGURA SANCHEZ KATHERINE", "poliza": "02B56756", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "", "moneda": "CRC", "monto": 35436.35, "iva": 0.13, "com": 0.15}, {"aseg": "ASSA", "tipo": "(ATR)", "nombre": "ACUÑA MORA ROXANA MAYELA", "poliza": "02B59073", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "2026-02-05", "moneda": "CRC", "monto": 31174.89, "iva": 0.13, "com": 0.15}, {"aseg": "QUALITAS", "tipo": "", "nombre": "GONZALEZ JIMENEZ ROLANDO JOSE", "poliza": "433428", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "", "moneda": "CRC", "monto": 25000.0, "iva": 0.13, "com": 0.15}, {"aseg": "INS", "tipo": "", "nombre": "RODRIGUEZ MORALES SANTIAGO", "poliza": "434", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "", "moneda": "CRC", "monto": 35099.0, "iva": 0.13, "com": 0.15}, {"aseg": "INS", "tipo": "", "nombre": "MORALES GOMEZ DAVID FRANCISCO", "poliza": "2191502", "frec": "MENSUAL", "venc": "28/02/2026", "pago": "", "moneda": "CRC", "monto": 38267.0, "iva": 0.13, "com": 0.15}, {"aseg": "INS", "tipo": "(NVA)", "nombre": "FREDDY WALTER CHING", "poliza": "0201RCG000354200", "frec": "TRIMESTRAL", "venc": "30/01/2026", "pago": "2026-01-01", "moneda": "USD", "monto": 275.39, "iva": 0.13, "com": 0.2}, {"aseg": "QUALITAS", "tipo": "(NVA)", "nombre": "MELVIN ADRIAN CALDERON BRENES", "poliza": "483342", "frec": "SEMESTRAL", "venc": "2026-02-03", "pago": "2026-02-03", "moneda": "CRC", "monto": 170370.76, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "460082", "frec": "TRIMESTRAL", "venc": "2026-01-30", "pago": "2026-02-03", "moneda": "CRC", "monto": 64617.77, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "(ATR)", "nombre": "BERMUDEZ VALVERDE FABIOLA ELENA", "poliza": "473743", "frec": "TRIMESTRAL", "venc": "2026-01-30", "pago": "2026-02-08", "moneda": "CRC", "monto": 94824.32, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "(REG)", "nombre": "RICHMOND GUZMAN LUIS ALEXANDER", "poliza": "477807", "frec": "TRIMESTRAL", "venc": "2026-01-30", "pago": "2026-02-08", "moneda": "CRC", "monto": 77089.8, "iva": 0.13, "com": 0.13}, {"aseg": "PALIG", "tipo": "(ATR)", "nombre": "ADRIANA VILLALOBOS QUESADA", "poliza": "6000349", "frec": "TRIMESTRAL", "venc": "2026-01-01", "pago": "2026-01-02", "moneda": "USD", "monto": 1812.01, "iva": 0.02, "com": 0.25}, {"aseg": "QUALITAS", "tipo": "(ATR)", "nombre": "LOPEZ HERRERA KIMBERLY MARIA", "poliza": "472391", "frec": "SEMESTRAL", "venc": "2026-01-29", "pago": "2026-02-10", "moneda": "CRC", "monto": 65999.8, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "(NVA)", "nombre": " ALEXANDER MAUEL CARDENAS", "poliza": "485312", "frec": "TRIMESTRAL", "venc": "2026-02-11", "pago": "2026-02-11", "moneda": "CRC", "monto": 71171.11, "iva": 0.13, "com": 0.13}, {"aseg": "MAPFRE", "tipo": "(ADL)", "nombre": "GARY ZAVADYL", "poliza": "2011210100274", "frec": "ANUAL", "venc": "2026-03-15", "pago": "2026-02-13", "moneda": "USD", "monto": 689.91, "iva": 0.13, "com": 0.18}, {"aseg": "QUALITAS", "tipo": "(NVA)", "nombre": "DURAN GUZMAN PIERRE ANYELO", "poliza": "484972", "frec": "ANUAL", "venc": "14/02/2026", "pago": "2026-02-13", "moneda": "CRC", "monto": 263898.99, "iva": 0.13, "com": 0.13}, {"aseg": "RESUMEN QUINCENAL", "tipo": "", "nombre": "Colones", "poliza": "Dólares", "frec": "MENSUAL", "venc": "LEYENDA", "pago": "", "moneda": "CRC", "monto": 0, "iva": 0, "com": 0}, {"aseg": "Pagadas 1ra Quincena", "tipo": "", "nombre": 561108.130414, "poliza": "640.955516", "frec": "MENSUAL", "venc": "(NVA)", "pago": "Póliza Nueva", "moneda": "Pago mensual", "monto": 0, "iva": 0, "com": 0}, {"aseg": "  → Tu Neto 1ra Quincena (80%)", "tipo": "", "nombre": 448886.50433120003, "poliza": "512.7644128000001", "frec": "MENSUAL", "venc": "(ATR)", "pago": "Pago Atrasado (mes anterior)", "moneda": "Pago cada 3 meses", "monto": 0, "iva": 0, "com": 0}, {"aseg": "Pagadas 2da Quincena", "tipo": "", "nombre": 17608.91223, "poliza": "", "frec": "MENSUAL", "venc": "(ADL)", "pago": "Póliza Adelantada", "moneda": "Pago cada 6 meses", "monto": 0, "iva": 0, "com": 0}, {"aseg": "  → Tu Neto 2da Quincena (80%)", "tipo": "", "nombre": 14087.129784000002, "poliza": "", "frec": "MENSUAL", "venc": "(REG)", "pago": "Pago Regular", "moneda": "Pago anual", "monto": 0, "iva": 0, "com": 0}, {"aseg": "TOTAL Pagado Mes", "tipo": "", "nombre": 578717.042644, "poliza": "640.955516", "frec": "MENSUAL", "venc": "", "pago": "", "moneda": "Pago único", "monto": 0, "iva": 0, "com": 0}],
+  marzo: [{"aseg": "INS", "tipo": "", "nombre": "SHADID ESQUIVEL ARLETTE", "poliza": "1883529", "frec": "MENSUAL", "venc": "2026-03-01", "pago": "", "moneda": "CRC", "monto": 12559.0, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "DALEY EASY MARCOS GERMAINE", "poliza": "02B53630", "frec": "ANUAL", "venc": "2026-03-01", "pago": "", "moneda": "CRC", "monto": 455223.69, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "DE MEZERVILLE FERRETO NICOLE", "poliza": "450736", "frec": "MENSUAL", "venc": "2026-03-01", "pago": "", "moneda": "CRC", "monto": 16334.14, "iva": 0.13, "com": 0.13}, {"aseg": "INS", "tipo": "", "nombre": "VALVERDE HERRERA ALISON MARIA", "poliza": "2159764", "frec": "MENSUAL", "venc": "2026-03-02", "pago": "", "moneda": "CRC", "monto": 27289.0, "iva": 0.13, "com": 0.13}, {"aseg": "MAPFRE", "tipo": "", "nombre": "JACQUEMIN STEPHANE", "poliza": "2012500003473", "frec": "ANUAL", "venc": "2026-03-03", "pago": "", "moneda": "USD", "monto": 399.4, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MARIN VALLEJOS JANNY", "poliza": "02B53688", "frec": "ANUAL", "venc": "2026-03-04", "pago": "", "moneda": "CRC", "monto": 311124.37, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "AGENCIA ADUANAL MARGON SA", "poliza": "459058", "frec": "TRIMESTRAL", "venc": "2026-03-04", "pago": "", "moneda": "CRC", "monto": 82540.18, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MAYNOR ANTONIO SANDOVAL QUIROS", "poliza": "476249", "frec": "TRIMESTRAL", "venc": "2026-03-04", "pago": "", "moneda": "CRC", "monto": 50412.46, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ALVAREZ QUIROS STEFFANY GABRIELA", "poliza": "458896", "frec": "TRIMESTRAL", "venc": "2026-03-05", "pago": "", "moneda": "CRC", "monto": 83403.35, "iva": 0.13, "com": 0.13}, {"aseg": "INS", "tipo": "", "nombre": "MUÑOZ FONTANA JORGE LUIS", "poliza": "1881763", "frec": "MENSUAL", "venc": "2026-03-05", "pago": "", "moneda": "CRC", "monto": 11228.0, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "3-102-934254 SRL", "poliza": "02B60283", "frec": "MENSUAL", "venc": "2026-03-05", "pago": "", "moneda": "CRC", "monto": 44847.67, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "HILDA MARIA MORUA GOMEZ", "poliza": "476313", "frec": "TRIMESTRAL", "venc": "2026-03-05", "pago": "", "moneda": "CRC", "monto": 26876.15, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "DE CAMINO MOYA MERITXELL", "poliza": "477732", "frec": "MENSUAL", "venc": "2026-03-05", "pago": "", "moneda": "CRC", "monto": 22556.4, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ZUNIGA CASCO GLENDA ELIZABETH", "poliza": "02B59164", "frec": "MENSUAL", "venc": "2026-03-06", "pago": "", "moneda": "CRC", "monto": 31682.36, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "REYES BRAVO JOSE MANUEL", "poliza": "458900", "frec": "TRIMESTRAL", "venc": "2026-03-06", "pago": "", "moneda": "CRC", "monto": 158388.86, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "SERVICIOS TECNICOS VIACHICA SOCIEDAD ANONIMA", "poliza": "482196", "frec": "TRIMESTRAL", "venc": "2026-03-06", "pago": "", "moneda": "CRC", "monto": 146031.87, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "JOSE ABRAHAM PARRA CALVO", "poliza": "482366", "frec": "SEMESTRAL", "venc": "2026-03-06", "pago": "", "moneda": "CRC", "monto": 246693.38, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "BARRANTES GRANADOS ALEJANDRO", "poliza": "447680", "frec": "TRIMESTRAL", "venc": "2026-03-07", "pago": "", "moneda": "CRC", "monto": 217391.85, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "RANDALL GUIDO PORRAS FRUTOS", "poliza": "481228", "frec": "TRIMESTRAL", "venc": "2026-03-07", "pago": "", "moneda": "CRC", "monto": 135696.06, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "IVANIA HERMINIA DE S OROZCO BASTOS", "poliza": "482371", "frec": "SEMESTRAL", "venc": "2026-03-07", "pago": "", "moneda": "CRC", "monto": 154404.45, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "PARRA CALVO JOSE ABRAHAM", "poliza": "480910", "frec": "CONTADO", "venc": "2026-03-07", "pago": "", "moneda": "CRC", "monto": 25000.0, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ROHTIFA", "poliza": "02B52373", "frec": "TRIMESTRAL", "venc": "2026-03-08", "pago": "", "moneda": "USD", "monto": 154.55, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MELENDEZ MUÑOZ BRYAN", "poliza": "02B58771", "frec": "MENSUAL", "venc": "2026-03-08", "pago": "", "moneda": "CRC", "monto": 38045.33, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MARIA ISABEL QUIROS ARTAVIA", "poliza": "466107", "frec": "TRIMESTRAL", "venc": "2026-03-08", "pago": "", "moneda": "CRC", "monto": 52530.16, "iva": 0.13, "com": 0.13}, {"aseg": "INS", "tipo": "", "nombre": "CHAVARRIA ROJAS CARLOS ALBERTO", "poliza": "2199249", "frec": "MENSUAL", "venc": "2026-03-09", "pago": "", "moneda": "CRC", "monto": 55564.0, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "FALLAS CASTRO JOSE FABIO", "poliza": "481944", "frec": "SEMESTRAL", "venc": "2026-03-09", "pago": "", "moneda": "CRC", "monto": 114169.23, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORA MEJIAS MELANIA", "poliza": "481961", "frec": "TRIMESTRAL", "venc": "2026-03-09", "pago": "", "moneda": "CRC", "monto": 133236.87, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "VEGA GARNIER MARCO ANTONIO", "poliza": "482113", "frec": "SEMESTRAL", "venc": "2026-03-09", "pago": "", "moneda": "CRC", "monto": 100420.97, "iva": 0.13, "com": 0.13}, {"aseg": "INS", "tipo": "", "nombre": "VIQUEZ GOMEZ JOSUE", "poliza": "2190873", "frec": "MENSUAL", "venc": "2026-03-10", "pago": "", "moneda": "CRC", "monto": 46177.0, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ZABORNIAK NO APLICA KENNETH GERALD", "poliza": "447433", "frec": "TRIMESTRAL", "venc": "2026-03-10", "pago": "", "moneda": "CRC", "monto": 75183.22, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "LUIS LEONARDO RETANA ROJAS", "poliza": "454019", "frec": "TRIMESTRAL", "venc": "2026-03-10", "pago": "", "moneda": "CRC", "monto": 75966.78, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MULTISERVICIOS JIREH SOCIEDAD ANONIMA", "poliza": "458857", "frec": "TRIMESTRAL", "venc": "2026-03-10", "pago": "", "moneda": "CRC", "monto": 76990.49, "iva": 0.13, "com": 0.13}, {"aseg": "INS", "tipo": "", "nombre": "MORALES GOMEZ DAVID FRANCISCO", "poliza": "2197793", "frec": "MENSUAL", "venc": "2026-03-11", "pago": "", "moneda": "CRC", "monto": 35616.0, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "RETANA CALDERON KATTIA", "poliza": "447543", "frec": "TRIMESTRAL", "venc": "2026-03-11", "pago": "", "moneda": "CRC", "monto": 59948.25, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ZUMBADO CERDAS GAMALIEL HUMBERTO", "poliza": "459090", "frec": "TRIMESTRAL", "venc": "2026-03-11", "pago": "", "moneda": "CRC", "monto": 76710.91, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "GREEN HARTOG AUSTIN", "poliza": "482040", "frec": "CONTADO", "venc": "2026-03-11", "pago": "", "moneda": "CRC", "monto": 201182.25, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "FERNANDEZ BOLAÑOS MICHAEL EDUARDO", "poliza": "02B52416", "frec": "MENSUAL", "venc": "2026-03-12", "pago": "", "moneda": "CRC", "monto": 46983.51, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORA SOLIS VIVIAN", "poliza": "02B55362", "frec": "MENSUAL", "venc": "2026-03-12", "pago": "", "moneda": "CRC", "monto": 23985.37, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ABARCA RODRIGUEZ MARIELA", "poliza": "446089", "frec": "TRIMESTRAL", "venc": "2026-03-12", "pago": "", "moneda": "CRC", "monto": 34823.81, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "SALAZAR FONSECA CRISTIAN ANDRES", "poliza": "458362", "frec": "TRIMESTRAL", "venc": "2026-03-12", "pago": "", "moneda": "CRC", "monto": 23733.08, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "REPUESTOS Y REPARACIONES NARANJO SA", "poliza": "459099", "frec": "TRIMESTRAL", "venc": "2026-03-12", "pago": "", "moneda": "CRC", "monto": 72804.54, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MORALES LOAIZA NIDIA GUISELLE", "poliza": "466242", "frec": "TRIMESTRAL", "venc": "2026-03-12", "pago": "", "moneda": "CRC", "monto": 70399.45, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "JOSE GUILLERMO CUBILLO MURILLO", "poliza": "477972", "frec": "TRIMESTRAL", "venc": "2026-03-12", "pago": "", "moneda": "CRC", "monto": 72074.34, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "CARVAJAL CUBERO SIVIANY JOSE", "poliza": "02B53863", "frec": "TRIMESTRAL", "venc": "2026-03-13", "pago": "", "moneda": "CRC", "monto": 122978.69, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "HELEN YIRLANIA FALLAS GOMEZ", "poliza": "466416", "frec": "TRIMESTRAL", "venc": "2026-03-13", "pago": "", "moneda": "CRC", "monto": 60831.39, "iva": 0.13, "com": 0.13}, {"aseg": "INS", "tipo": "", "nombre": "ARRIETA ALVAREZ DANNY ALBERTO", "poliza": "2183916", "frec": "MENSUAL", "venc": "2026-03-13", "pago": "", "moneda": "CRC", "monto": 45147.0, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "DE CAMINO MOYA PABLO ANDRES", "poliza": "02B58456", "frec": "MENSUAL", "venc": "2026-03-14", "pago": "", "moneda": "CRC", "monto": 45728.96, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "BIENESTAR PARA TODOS S.A", "poliza": "441212", "frec": "MENSUAL", "venc": "2026-03-14", "pago": "", "moneda": "CRC", "monto": 28737.2, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "BIENESTAR PARA TODOS S.A", "poliza": "441212", "frec": "MENSUAL", "venc": "2026-03-14", "pago": "", "moneda": "CRC", "monto": 2844.98, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ULLOA GONZALEZ LUIS ALBERTO", "poliza": "447486", "frec": "TRIMESTRAL", "venc": "2026-03-14", "pago": "", "moneda": "CRC", "monto": 78622.02, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "QUESADA MADRIGAL LAURA MARCELA", "poliza": "481988", "frec": "TRIMESTRAL", "venc": "2026-03-14", "pago": "", "moneda": "CRC", "monto": 82403.93, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "YELBA DE LOS ANGELES VEGA VEGA", "poliza": "482410", "frec": "TRIMESTRAL", "venc": "2026-03-14", "pago": "", "moneda": "CRC", "monto": 80473.42, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "3-102-934689 SRL", "poliza": "02B59659", "frec": "MENSUAL", "venc": "2026-03-15", "pago": "", "moneda": "CRC", "monto": 35904.86, "iva": 0.13, "com": 0.13}, {"aseg": "INS", "tipo": "", "nombre": "GATICA VALLE ORLANDO ALEXANDER", "poliza": "2157711", "frec": "SEMESTRAL", "venc": "2026-03-15", "pago": "", "moneda": "CRC", "monto": 211226.0, "iva": 0.13, "com": 0.13}, {"aseg": "MAPFRE", "tipo": "", "nombre": "ZAVADIL GARY EDWIN", "poliza": "2011210100274", "frec": "ANUAL", "venc": "2026-03-15", "pago": "", "moneda": "USD", "monto": 689.91, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "VIQUEZ BARRANTES MARCO TULIO", "poliza": "447485", "frec": "TRIMESTRAL", "venc": "2026-03-15", "pago": "", "moneda": "CRC", "monto": 147862.78, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "SEIDY MARIA CASTRO CAVALLINI", "poliza": "478248", "frec": "TRIMESTRAL", "venc": "2026-03-15", "pago": "", "moneda": "CRC", "monto": 62620.8, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "VALVERDE BRENES ALEJANDRA MARIA", "poliza": "482415", "frec": "TRIMESTRAL", "venc": "2026-03-15", "pago": "", "moneda": "CRC", "monto": 92289.52, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "DE CAMINO VELOZO RONNIE", "poliza": "02B57329", "frec": "MENSUAL", "venc": "2026-03-16", "pago": "", "moneda": "CRC", "monto": 28785.65, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "JIMENEZ DIAZ SINDY DE LOS ANGELES", "poliza": "02B60424", "frec": "TRIMESTRAL", "venc": "2026-03-16", "pago": "", "moneda": "CRC", "monto": 202727.27, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "GONZALEZ CORTES STEVEN", "poliza": "470733", "frec": "TRIMESTRAL", "venc": "2026-03-16", "pago": "", "moneda": "CRC", "monto": 91786.46, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "JACKELINE DE LOS ANGELES ROJAS BADILLA", "poliza": "478328", "frec": "TRIMESTRAL", "venc": "2026-03-16", "pago": "", "moneda": "CRC", "monto": 57320.32, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "JACKELINE DE LOS ANGELES ROJAS BADILLA", "poliza": "478330", "frec": "TRIMESTRAL", "venc": "2026-03-16", "pago": "", "moneda": "CRC", "monto": 67243.9, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MARCO ANTONIO VEGA RODRIGUEZ", "poliza": "478366", "frec": "TRIMESTRAL", "venc": "2026-03-16", "pago": "", "moneda": "CRC", "monto": 57002.54, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "RETANA ROJAS LEONARDO", "poliza": "482029", "frec": "TRIMESTRAL", "venc": "2026-03-16", "pago": "", "moneda": "CRC", "monto": 94956.8, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "TRINIDAD Y CONCEPCION LIMITADA", "poliza": "454943", "frec": "TRIMESTRAL", "venc": "2026-03-18", "pago": "", "moneda": "CRC", "monto": 61637.65, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "JYNEQUIPOS SRL", "poliza": "479908", "frec": "SEMESTRAL", "venc": "2026-03-18", "pago": "", "moneda": "CRC", "monto": 134091.71, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "BARAHONA ALVAREZ LUIS DIEGO", "poliza": "482056", "frec": "SEMESTRAL", "venc": "2026-03-18", "pago": "", "moneda": "CRC", "monto": 123889.73, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MURILLO SALAZAR JOSE AUGUSTO", "poliza": "482220", "frec": "CONTADO", "venc": "2026-03-18", "pago": "", "moneda": "CRC", "monto": 288168.85, "iva": 0.13, "com": 0.13}, {"aseg": "INS", "tipo": "", "nombre": "HERRERA CORTES GABRIEL ALFONSO", "poliza": "1998527", "frec": "TRIMESTRAL", "venc": "2026-03-19", "pago": "", "moneda": "CRC", "monto": 79233.0, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "CUBILLO PEREZ JOSE EDUARDO", "poliza": "447572", "frec": "TRIMESTRAL", "venc": "2026-03-19", "pago": "", "moneda": "CRC", "monto": 57150.0, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MONTERO ABADIA DANILO MARTIN", "poliza": "459132", "frec": "SEMESTRAL", "venc": "2026-03-19", "pago": "", "moneda": "CRC", "monto": 137838.88, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "CAMPOS CALVO MELANY", "poliza": "482139", "frec": "TRIMESTRAL", "venc": "2026-03-19", "pago": "", "moneda": "CRC", "monto": 84457.13, "iva": 0.13, "com": 0.13}, {"aseg": "INS", "tipo": "", "nombre": "RODRIGUEZ SILES ANDREY SEBASTI", "poliza": "2191133", "frec": "TRIMESTRAL", "venc": "2026-03-20", "pago": "", "moneda": "CRC", "monto": 105871.0, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "DARCIA FERNANDEZ KARLA VANESSA", "poliza": "458839", "frec": "SEMESTRAL", "venc": "2026-03-20", "pago": "", "moneda": "CRC", "monto": 164384.28, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ALVARADO RODRIGUEZ MELISSA", "poliza": "458866", "frec": "SEMESTRAL", "venc": "2026-03-20", "pago": "", "moneda": "CRC", "monto": 187503.77, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "CARUZO CHAVES RAFAEL MAURICIO", "poliza": "459007", "frec": "SEMESTRAL", "venc": "2026-03-20", "pago": "", "moneda": "CRC", "monto": 156410.39, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "SILES MONGE MARITZA DE LOS ANGELES", "poliza": "470801", "frec": "TRIMESTRAL", "venc": "2026-03-20", "pago": "", "moneda": "CRC", "monto": 78105.6, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "REPUESTOSNARANJO Y REPARACIONES SA", "poliza": "478893", "frec": "TRIMESTRAL", "venc": "2026-03-20", "pago": "", "moneda": "CRC", "monto": 109776.64, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "AZOFEIFA MONGE MARIA LIDIETH DEL ROSARIO", "poliza": "482324", "frec": "TRIMESTRAL", "venc": "2026-03-21", "pago": "", "moneda": "CRC", "monto": 87744.51, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ZUMBADO CERDAS GAMALIEL HUMBERTO", "poliza": "459140", "frec": "TRIMESTRAL", "venc": "2026-03-22", "pago": "", "moneda": "CRC", "monto": 83988.61, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "JETION DE INVERSIONES KRUMYDY SRL", "poliza": "468545", "frec": "MENSUAL", "venc": "2026-03-22", "pago": "", "moneda": "CRC", "monto": 16174.14, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "LERY JAZMIN SANCHEZ CALDERON", "poliza": "478965", "frec": "TRIMESTRAL", "venc": "2026-03-22", "pago": "", "moneda": "CRC", "monto": 79137.12, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "HERNANDEZ MOYA ROSALIA", "poliza": "482094", "frec": "CONTADO", "venc": "2026-03-22", "pago": "", "moneda": "CRC", "monto": 197039.46, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "SANCHEZ SOLIS YENDRY CAROLAING", "poliza": "02B54442", "frec": "MENSUAL", "venc": "2026-03-23", "pago": "", "moneda": "CRC", "monto": 27083.4, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "JETION DE INVERSIONES KRUMYDY SRL", "poliza": "468546", "frec": "MENSUAL", "venc": "2026-03-23", "pago": "", "moneda": "CRC", "monto": 16174.14, "iva": 0.13, "com": 0.13}, {"aseg": "INS", "tipo": "", "nombre": "MARTINEZ GUTIERREZ MARIA LUISA", "poliza": "2183177", "frec": "MENSUAL", "venc": "2026-03-23", "pago": "", "moneda": "CRC", "monto": 25990.0, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MARIN VALLEJOS JANNY", "poliza": "311959", "frec": "MENSUAL", "venc": "2026-03-24", "pago": "", "moneda": "CRC", "monto": 27314.0, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "STEP ONE SA", "poliza": "459845", "frec": "TRIMESTRAL", "venc": "2026-03-24", "pago": "", "moneda": "CRC", "monto": 61101.61, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "SEGURA VALVERDE MARCIA MASSIEL", "poliza": "459152", "frec": "SEMESTRAL", "venc": "2026-03-25", "pago": "", "moneda": "CRC", "monto": 168415.14, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MARTINEZ CASTILLO SOLEDAD", "poliza": "02B57418", "frec": "SEMESTRAL", "venc": "2026-03-26", "pago": "", "moneda": "USD", "monto": 706.82, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "AGUERO RAMIREZ LUIS EDUARDO", "poliza": "02B56731", "frec": "TRIMESTRAL", "venc": "2026-03-26", "pago": "", "moneda": "CRC", "monto": 98731.06, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "CHING CALVO WALTER FREDY", "poliza": "02B59772", "frec": "MENSUAL", "venc": "2026-03-26", "pago": "", "moneda": "CRC", "monto": 33069.99, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "HERNANDEZ FALLAS JOSE PABLO", "poliza": "459024", "frec": "TRIMESTRAL", "venc": "2026-03-26", "pago": "", "moneda": "CRC", "monto": 59113.55, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MARIA TATIANA SALAZAR MORA", "poliza": "467463", "frec": "TRIMESTRAL", "venc": "2026-03-26", "pago": "", "moneda": "CRC", "monto": 59746.3, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MONGE VEGA CINDY MARIA", "poliza": "471113", "frec": "TRIMESTRAL", "venc": "2026-03-26", "pago": "", "moneda": "CRC", "monto": 87192.51, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "KARLA MARIA MADRIGAL GOMEZ", "poliza": "479400", "frec": "TRIMESTRAL", "venc": "2026-03-27", "pago": "", "moneda": "CRC", "monto": 59248.18, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "BACK OFFICE CONSULTING SA", "poliza": "480212", "frec": "CONTADO", "venc": "2026-03-27", "pago": "", "moneda": "CRC", "monto": 203389.82, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "QUIROS ELIZONDO ERICK JESUS", "poliza": "02B54116", "frec": "MENSUAL", "venc": "2026-03-28", "pago": "", "moneda": "CRC", "monto": 42450.35, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ARROYO CHACON REBECA ISABEL", "poliza": "482160", "frec": "SEMESTRAL", "venc": "2026-03-28", "pago": "", "moneda": "CRC", "monto": 127750.25, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ACUNIA CALDERON CAMILA", "poliza": "482162", "frec": "CONTADO", "venc": "2026-03-28", "pago": "", "moneda": "CRC", "monto": 245579.7, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "MAYKEL AMADOR MARTINEZ PEREZ", "poliza": "479456", "frec": "TRIMESTRAL", "venc": "2026-03-29", "pago": "", "moneda": "CRC", "monto": 77748.94, "iva": 0.13, "com": 0.13}, {"aseg": "MAPFRE", "tipo": "", "nombre": "SEGURA VALVERDE MARCIA MASSIEL", "poliza": "2012400002979", "frec": "TRIMESTRAL", "venc": "2026-03-30", "pago": "", "moneda": "CRC", "monto": 45001.98, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "CANALES CRUZ FAELA ANTONIA", "poliza": "459034", "frec": "TRIMESTRAL", "venc": "2026-03-30", "pago": "", "moneda": "CRC", "monto": 71085.0, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "CARMONA NO TIENE ANA CECILIA", "poliza": "459176", "frec": "SEMESTRAL", "venc": "2026-03-30", "pago": "", "moneda": "CRC", "monto": 156365.42, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "VALERY LORENA QUESADA VEGA", "poliza": "467680", "frec": "TRIMESTRAL", "venc": "2026-03-30", "pago": "", "moneda": "CRC", "monto": 52617.94, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "GUTIERREZ MENA MARIA DE LOS ANGELES", "poliza": "470707", "frec": "TRIMESTRAL", "venc": "2026-03-30", "pago": "", "moneda": "CRC", "monto": 76977.52, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "SEGURA SANCHEZ KATHERINE", "poliza": "02B56756", "frec": "MENSUAL", "venc": "2026-03-31", "pago": "", "moneda": "CRC", "monto": 35436.35, "iva": 0.13, "com": 0.13}, {"aseg": "QUALITAS", "tipo": "", "nombre": "ACUÑA MORA ROXANA MAYELA", "poliza": "02B59073", "frec": "MENSUAL", "venc": "2026-03-31", "pago": "", "moneda": "CRC", "monto": 31174.89, "iva": 0.13, "com": 0.13}, {"aseg": "RESUMEN QUINCENAL", "tipo": "", "nombre": "Colones", "poliza": "Dólares", "frec": "MENSUAL", "venc": "LEYENDA", "pago": "", "moneda": "CRC", "monto": 0, "iva": 0, "com": 0}],
+  abril: [],
+  mayo: [],
+  junio: [],
+  julio: [],
+  agosto: [],
+  septiembre: [],
+  octubre: [],
+  noviembre: [],
+  diciembre: []
+};
+
+const MESES_NOMBRES = {
+  enero: 'Enero',
+  febrero: 'Febrero', marzo: 'Marzo', abril: 'Abril', mayo: 'Mayo',
+  junio: 'Junio', julio: 'Julio', agosto: 'Agosto', septiembre: 'Septiembre',
+  octubre: 'Octubre', noviembre: 'Noviembre', diciembre: 'Diciembre'
+};
+
+// ===== FUNCIÓN DE GENERACIÓN DE RECURRENCIAS (definida antes de usar) =====
+function generarRecurrenciasAutomaticasPreInit() {
+  const mesesArray = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+  
+  const polizasGeneradas = {};
+  mesesArray.forEach(m => { polizasGeneradas[m] = []; });
+  
+  let totalGeneradas = 0;
+  
+  mesesArray.forEach((mes) => {
+    const polizasMes = db.polizas[mes] || [];
+    
+    polizasMes.forEach(poliza => {
+      if (poliza.frec === 'CONTADO' || poliza.frec === 'DEDUCCIÓN AUTOMÁTICA') return;
+      
+      let mesesASumar = 0;
+      if (poliza.frec === 'MENSUAL') mesesASumar = 1;
+      else if (poliza.frec === 'TRIMESTRAL') mesesASumar = 3;
+      else if (poliza.frec === 'SEMESTRAL') mesesASumar = 6;
+      else if (poliza.frec === 'ANUAL') mesesASumar = 12;
+      else return;
+      
+      let fechaVencStr = poliza.venc;
+      if (fechaVencStr.includes('/')) {
+        const partes = fechaVencStr.split('/');
+        if (partes.length === 3) {
+          fechaVencStr = `${partes[2]}-${partes[1].padStart(2,'0')}-${partes[0].padStart(2,'0')}`;
+        }
+      }
+      
+      const fechaVencOriginal = new Date(fechaVencStr + 'T12:00:00');
+      if (isNaN(fechaVencOriginal.getTime())) return;
+      
+      const anioActual = 2026;
+      const mesInicial = fechaVencOriginal.getMonth();
+      const diaVencimiento = fechaVencOriginal.getDate();
+      
+      let mesActual = mesInicial;
+      let contador = 0;
+      
+      while (contador < 12) {
+        mesActual += mesesASumar;
+        if (mesActual > 11) break;
+        
+        const nuevaFecha = new Date(anioActual, mesActual, diaVencimiento, 12, 0, 0);
+        if (nuevaFecha.getDate() !== diaVencimiento) {
+          nuevaFecha.setDate(0);
+        }
+        
+        const nuevaFechaISO = nuevaFecha.toISOString().split('T')[0];
+        const mesDestino = mesesArray[mesActual];
+        
+        const nuevaPoliza = {
+          id: 'recur_' + poliza.id + '_' + contador,
+          aseg: poliza.aseg,
+          tipo: poliza.tipo,
+          nombre: poliza.nombre,
+          poliza: poliza.poliza,
+          frec: poliza.frec,
+          venc: nuevaFechaISO,
+          pago: '',
+          moneda: poliza.moneda,
+          monto: poliza.monto,
+          iva: poliza.iva,
+          com: poliza.com,
+          pctCorredora: poliza.pctCorredora || 0.20,
+          clienteCedula: poliza.clienteCedula || ''
+        };
+        
+        polizasGeneradas[mesDestino].push(nuevaPoliza);
+        totalGeneradas++;
+        contador++;
+      }
+    });
+  });
+  
+  mesesArray.forEach(mes => {
+    if (polizasGeneradas[mes].length > 0) {
+      if (!db.polizas[mes]) db.polizas[mes] = [];
+      db.polizas[mes] = db.polizas[mes].concat(polizasGeneradas[mes]);
+    }
+  });
+  
+  console.log(`🎯 Recurrencias generadas: ${totalGeneradas} pólizas`);
+}
+
+// ===== BASE DE DATOS EN MEMORIA (NO LOCALSTORAGE) =====
+let db = { polizas: JSON.parse(JSON.stringify(DATOS_INICIALES)), clientes: [] };
+
+// Asignar IDs a los datos iniciales
+Object.keys(db.polizas).forEach(mes => {
+  db.polizas[mes].forEach((p, i) => { 
+    if (!p.id) p.id = mes + '_' + i; 
+  });
+});
+
+// Asegurar estructura
+if (!db.clientes) db.clientes = [];
+const _MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+_MESES.forEach(mes => { 
+  if (!db.polizas[mes]) db.polizas[mes] = []; 
+});
+
+function guardarDB() { 
+  // En esta versión no guardamos en localStorage
+  // Los datos solo existen mientras la página está abierta
+  console.log('Datos actualizados en memoria');
+}
+
+
+function calcNeto(monto, iva) { 
+  return monto * (1 - iva); 
+}
+
+function calcComision(monto, iva, comPct, pctCorredora) { 
+  const neto = calcNeto(monto, iva);
+  const comisionBruta = neto * comPct;
+  // Si no se especifica pctCorredora, usar el default (20%)
+  const corredora = pctCorredora !== undefined ? pctCorredora : 0.20;
+  const tuPorcentaje = 1 - corredora; // Si corredora = 20%, tú = 80%
+  const tuComision = comisionBruta * tuPorcentaje;
+  return tuComision;
+}
+
+function calcQuincena(fechaPago, monto, iva, comPct, pctCorredora) {
+  // SIEMPRE calcular directamente
+  if (!fechaPago) return { q1: 0, q2: 0 };
+  const fecha = new Date(fechaPago + 'T12:00:00');
+  const dia = fecha.getDate();
+  const comision = calcComision(monto, iva, comPct, pctCorredora);
+  return dia <= 15 ? { q1: comision, q2: 0 } : { q1: 0, q2: comision };
+}
+
+function calcEstado(fechaPago, fechaVenc) {
+  if (fechaPago) return 'PAGADO';
+  const hoy = new Date();
+  hoy.setHours(0, 0, 0, 0);
+  const venc = new Date(fechaVenc + 'T12:00:00');
+  
+  if (venc >= hoy) return 'PENDIENTE'; // Aún no vence
+  
+  // Calcular días de atraso desde el vencimiento
+  const diffTime = hoy - venc;
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+  
+  if (diffDays >= 10) return 'VENCIDO'; // 10 o más días de atraso → Amarillo
+  return 'PENDIENTE'; // Menos de 10 días → Blanco (aún hay margen)
+}
+
+function formatMoney(n) {
+  return (n || 0).toLocaleString('es-CR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+let mesActual = 'enero';
+let filtros = {};
+let editandoId = null;
+let editandoMes = null;
+
+function toggleCancelada(mes, id) {
+  const p = db.polizas[mes].find(pol => pol.id === id);
+  if (p) {
+    p.cancelada = !p.cancelada;
+    // Si se cancela, limpiar fecha de pago
+    if (p.cancelada) {
+      p.pago = '';
+    }
+    guardarDB();
+    renderMes(mes);
+  }
+}
+
+function programarSiguiente(mes, id) {
+  const polizaOriginal = db.polizas[mes].find(p => p.id === id);
+  if (!polizaOriginal) return;
+  
+  // Calcular meses a sumar según frecuencia
+  let mesesASumar = 0;
+  const frec = polizaOriginal.frec;
+  
+  if (frec === 'MENSUAL') mesesASumar = 1;
+  else if (frec === 'TRIMESTRAL') mesesASumar = 3;
+  else if (frec === 'SEMESTRAL') mesesASumar = 6;
+  else if (frec === 'ANUAL') mesesASumar = 12;
+  else {
+    alert('Esta frecuencia (' + frec + ') no se puede programar automáticamente');
+    return;
+  }
+  
+  // Calcular nueva fecha de vencimiento
+  const fechaVencOriginal = new Date(polizaOriginal.venc + 'T12:00:00');
+  const nuevaFechaVenc = new Date(fechaVencOriginal);
+  nuevaFechaVenc.setMonth(nuevaFechaVenc.getMonth() + mesesASumar);
+  
+  // Formatear a YYYY-MM-DD
+  const nuevaFechaISO = nuevaFechaVenc.toISOString().split('T')[0];
+  
+  // Determinar mes destino (enero, febrero, etc.)
+  const mesesArray = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+  const mesDestino = mesesArray[nuevaFechaVenc.getMonth()];
+  
+  // Crear nueva póliza (copia de la original)
+  const nuevaPoliza = {
+    id: 'pol_' + Date.now(),
+    aseg: polizaOriginal.aseg,
+    tipo: polizaOriginal.tipo,
+    nombre: polizaOriginal.nombre,
+    poliza: polizaOriginal.poliza,
+    frec: polizaOriginal.frec,
+    venc: nuevaFechaISO,
+    pago: '', // Sin fecha de pago
+    moneda: polizaOriginal.moneda,
+    monto: polizaOriginal.monto,
+    iva: polizaOriginal.iva,
+    com: polizaOriginal.com,
+    pctCorredora: polizaOriginal.pctCorredora,
+    clienteCedula: polizaOriginal.clienteCedula || ''
+  };
+  
+  // Agregar al mes destino
+  if (!db.polizas[mesDestino]) db.polizas[mesDestino] = [];
+  db.polizas[mesDestino].push(nuevaPoliza);
+  
+  guardarDB();
+  
+  // Confirmar y preguntar si quiere ir al mes
+  const fechaFormateada = formatDateCR(nuevaFechaISO);
+  if (confirm('✅ Póliza programada para ' + mesDestino.toUpperCase() + '\n\nNueva fecha de vencimiento: ' + fechaFormateada + '\n\n¿Deseas ir a ver el mes de ' + mesDestino + '?')) {
+    const dummyBtn = document.createElement('button');
+    dummyBtn.classList.add('tab-btn');
+    cambiarTab(mesDestino, dummyBtn);
+  } else {
+    renderMes(mes); // Solo actualizar el mes actual
+  }
+}
+
+function cambiarMesDesdeSelector(mes) {
+  if (!mes) return; // Si no seleccionó nada, no hacer nada
+  cambiarTab(mes, document.querySelector('.tab-btn'));
+  // Actualizar el selector para mostrar el mes seleccionado
+  document.getElementById('selector-mes').value = mes;
+}
+
+function cambiarTab(mes, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + mes).classList.add('active');
+  btn.classList.add('active');
+  mesActual = mes;
+  
+  // Actualizar el selector de meses
+  const selector = document.getElementById('selector-mes');
+  if (mes === 'dashboard' || mes === 'clientes') {
+    selector.value = ''; // Limpiar selector si está en Dashboard o Clientes
+  } else {
+    selector.value = mes; // Seleccionar el mes correspondiente
+  }
+  
+  mes === 'dashboard' ? renderDashboard() : renderMes(mes);
+}
+
+
+function renderMesConBusqueda(mes) {
+  // Guardar el valor actual del input
+  const inputBusq = document.getElementById('busq-' + mes);
+  const valorBusqueda = inputBusq ? inputBusq.value : '';
+  
+  // Renderizar
+  renderMes(mes);
+  
+  // Restaurar el valor y aplicar el filtro
+  setTimeout(() => {
+    const nuevoInput = document.getElementById('busq-' + mes);
+    if (nuevoInput) {
+      nuevoInput.value = valorBusqueda;
+      if (valorBusqueda) {
+        actualizarBusqueda(mes, valorBusqueda);
+      }
+    }
+  }, 10);
+}
+
+function actualizarBusqueda(mes, valor) {
+  if (!filtros[mes]) filtros[mes] = { busq: '', estado: '', frec: '', orden: 'pago' };
+  filtros[mes].busq = valor;
+  
+  // Filtrar las filas sin re-renderizar
+  const busqueda = valor.toLowerCase();
+  const tbody = document.querySelector('#page-' + mes + ' tbody');
+  if (!tbody) return;
+  
+  const filas = tbody.querySelectorAll('tr');
+  filas.forEach(fila => {
+    const textoFila = fila.textContent.toLowerCase();
+    if (!busqueda || textoFila.includes(busqueda)) {
+      fila.style.display = '';
+    } else {
+      fila.style.display = 'none';
+    }
+  });
+}
+
+function limpiarFiltroFechas(mes) {
+  filtros[mes].fechaDesde = '';
+  filtros[mes].fechaHasta = '';
+  renderMesConBusqueda(mes);
+}
+
+function limpiarFiltroPago(mes) {
+  filtros[mes].fechaPagoDesde = '';
+  filtros[mes].fechaPagoHasta = '';
+  renderMesConBusqueda(mes);
+}
+
+function limpiarTodosFiltros(mes) {
+  filtros[mes] = {
+    busq: '',
+    estado: '',
+    frec: '',
+    orden: 'pago',
+    fechaDesde: '',
+    fechaHasta: '',
+    fechaPagoDesde: '',
+    fechaPagoHasta: ''
+  };
+  renderMes(mes);
+}
+
+function renderMes(mes) {
+  const polizas = db.polizas[mes] || [];
+  
+  if (!filtros[mes]) filtros[mes] = { busq: '', estado: '', frec: '', orden: 'pago', fechaDesde: '', fechaHasta: '', fechaPagoDesde: '', fechaPagoHasta: '' };
+  
+  const busqueda = filtros[mes].busq.toLowerCase();
+  const filtroEstado = filtros[mes].estado;
+  const filtroFrec = filtros[mes].frec;
+  const tipoOrden = filtros[mes].orden;
+  const fechaDesde = filtros[mes].fechaDesde || '';
+  const fechaHasta = filtros[mes].fechaHasta || '';
+  const fechaPagoDesde = filtros[mes].fechaPagoDesde || '';
+  const fechaPagoHasta = filtros[mes].fechaPagoHasta || '';
+  
+  // Convertir fechas del filtro a formato comparable
+  const fechaDesdeISO = fechaDesde ? parseDateCR(fechaDesde) : '';
+  const fechaHastaISO = fechaHasta ? parseDateCR(fechaHasta) : '';
+  const fechaPagoDesdeISO = fechaPagoDesde ? parseDateCR(fechaPagoDesde) : '';
+  const fechaPagoHastaISO = fechaPagoHasta ? parseDateCR(fechaPagoHasta) : '';
+  
+  let filtradas = polizas.filter(p => {
+    const matchBusq = !busqueda || (p.nombre + p.poliza + p.aseg).toLowerCase().includes(busqueda);
+    const matchEst = !filtroEstado || calcEstado(p.pago, p.venc) === filtroEstado;
+    const matchFrec = !filtroFrec || p.frec === filtroFrec;
+    
+    // Filtro de rango de fechas de vencimiento
+    let matchFechasVenc = true;
+    if (fechaDesdeISO || fechaHastaISO) {
+      const vencISO = parseDateCR(p.venc);
+      if (fechaDesdeISO && vencISO < fechaDesdeISO) matchFechasVenc = false;
+      if (fechaHastaISO && vencISO > fechaHastaISO) matchFechasVenc = false;
+    }
+    
+    // Filtro de rango de fechas de pago
+    let matchFechasPago = true;
+    if (fechaPagoDesdeISO || fechaPagoHastaISO) {
+      const pagoISO = parseDateCR(p.pago);
+      if (!pagoISO) matchFechasPago = false; // Sin fecha de pago no cumple el filtro
+      else {
+        if (fechaPagoDesdeISO && pagoISO < fechaPagoDesdeISO) matchFechasPago = false;
+        if (fechaPagoHastaISO && pagoISO > fechaPagoHastaISO) matchFechasPago = false;
+      }
+    }
+    
+    return matchBusq && matchEst && matchFrec && matchFechasVenc && matchFechasPago;
+  });
+  
+  filtradas.sort((a, b) => {
+    if (tipoOrden === 'pago') {
+      if (!a.pago && !b.pago) return 0;
+      if (!a.pago) return 1;
+      if (!b.pago) return -1;
+      return new Date(a.pago) - new Date(b.pago);
+    }
+    if (tipoOrden === 'venc') {
+      if (!a.venc && !b.venc) return 0;
+      if (!a.venc) return 1;
+      if (!b.venc) return -1;
+      return new Date(a.venc) - new Date(b.venc);
+    }
+    if (tipoOrden === 'nombre') return (a.nombre || '').localeCompare(b.nombre || '');
+    if (tipoOrden === 'monto') return (b.monto || 0) - (a.monto || 0);
+    if (tipoOrden === 'aseg') return (a.aseg || '').localeCompare(b.aseg || '');
+    return 0;
+  });
+  
+  let totalQ1CRC = 0, totalQ2CRC = 0, totalQ1USD = 0, totalQ2USD = 0;
+  let countPagadas = 0, countPendientes = 0, countVencidas = 0, countCanceladas = 0;
+  
+  polizas.forEach(p => {
+    // No sumar pólizas canceladas a las comisiones
+    if (!p.cancelada) {
+      const q = calcQuincena(p.pago, p.monto, p.iva, p.com, p.pctCorredora);
+      if (p.moneda === 'CRC') { totalQ1CRC += q.q1; totalQ2CRC += q.q2; }
+      else { totalQ1USD += q.q1; totalQ2USD += q.q2; }
+    }
+    
+    const estado = p.cancelada ? 'CANCELADO' : calcEstado(p.pago, p.venc);
+    if (estado === 'CANCELADO') countCanceladas++;
+    else if (estado === 'PAGADO') countPagadas++;
+    else if (estado === 'VENCIDO') countVencidas++;
+    else countPendientes++;
+  });
+  
+  const totalCRC = totalQ1CRC + totalQ2CRC;
+  const totalUSD = totalQ1USD + totalQ2USD;
+  
+  let html = `
+    <div class="stats-grid">
+      <div class="stat-card" style="background: linear-gradient(135deg, #0052CC 0%, #0747A6 100%); color: white; grid-column: span 2;">
+        <div class="stat-label" style="color: rgba(255,255,255,0.9); font-size: 13px;">💰 1RA QUINCENA (Días 1-15)</div>
+        <div style="margin-top: 8px; font-size: 13px; opacity: 0.85;">Comisión Bruta CRC:</div>
+        <div style="font-size: 16px; font-weight: 600; margin-bottom: 6px;">₡${formatMoney(totalQ1CRC)}</div>
+        <div style="font-size: 12px; opacity: 0.85;">Menos 20% Corredora: -₡${formatMoney(totalQ1CRC * 0.2)}</div>
+        <div style="border-top: 2px solid rgba(255,255,255,0.3); margin: 10px 0; padding-top: 10px;">
+          <div style="font-size: 12px; opacity: 0.9; margin-bottom: 4px;">🎯 TU NETO A PAGAR (80%):</div>
+          <div class="stat-value" style="color: #FFEB3B; font-size: 14px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">₡${formatMoney(totalQ1CRC * 0.8)}</div>
+        </div>
+        <div style="margin-top: 12px; font-size: 11px; opacity: 0.85; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 8px;">
+          <div style="font-size: 12px; margin-bottom: 4px;">Comisión Bruta USD: <strong style="font-size: 16px;">${formatMoney(totalQ1USD)}</strong></div>
+          <div style="font-size: 12px;">🎯 Tu Neto USD (80%): <strong style="font-size: 16px; color: #FFEB3B;">${formatMoney(totalQ1USD * 0.8)}</strong></div>
+        </div>
+      </div>
+      <div class="stat-card" style="background: linear-gradient(135deg, #00875A 0%, #006644 100%); color: white; grid-column: span 2;">
+        <div class="stat-label" style="color: rgba(255,255,255,0.9); font-size: 13px;">💰 2DA QUINCENA (Días 16-31)</div>
+        <div style="margin-top: 8px; font-size: 13px; opacity: 0.85;">Comisión Bruta CRC:</div>
+        <div style="font-size: 16px; font-weight: 600; margin-bottom: 6px;">₡${formatMoney(totalQ2CRC)}</div>
+        <div style="font-size: 12px; opacity: 0.85;">Menos 20% Corredora: -₡${formatMoney(totalQ2CRC * 0.2)}</div>
+        <div style="border-top: 2px solid rgba(255,255,255,0.3); margin: 10px 0; padding-top: 10px;">
+          <div style="font-size: 12px; opacity: 0.9; margin-bottom: 4px;">🎯 TU NETO A PAGAR (80%):</div>
+          <div class="stat-value" style="color: #FFEB3B; font-size: 14px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">₡${formatMoney(totalQ2CRC * 0.8)}</div>
+        </div>
+        <div style="margin-top: 12px; font-size: 11px; opacity: 0.85; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 8px;">
+          <div style="font-size: 12px; margin-bottom: 4px;">Comisión Bruta USD: <strong style="font-size: 16px;">${formatMoney(totalQ2USD)}</strong></div>
+          <div style="font-size: 12px;">🎯 Tu Neto USD (80%): <strong style="font-size: 16px; color: #FFEB3B;">${formatMoney(totalQ2USD * 0.8)}</strong></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="stats-grid" style="margin-top: 16px;">
+      <div class="stat-card">
+        <div class="stat-label">Total Mes CRC</div>
+        <div class="stat-value">₡${formatMoney(totalCRC)}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Total Mes USD</div>
+        <div class="stat-value">$${formatMoney(totalUSD)}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Tu Neto 80% CRC</div>
+        <div class="stat-value green">₡${formatMoney(totalCRC * 0.8)}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Pólizas Pagadas</div>
+        <div class="stat-value green">${countPagadas}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Pólizas Pendientes</div>
+        <div class="stat-value orange">${countPendientes}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Pólizas Vencidas</div>
+        <div class="stat-value" style="color:#F57C00;">${countVencidas}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Pólizas Canceladas</div>
+        <div class="stat-value" style="color:#B71C1C;">${countCanceladas}</div>
+      </div>
+    </div>
+    
+    <div class="toolbar">
+      <input type="text" id="busq-${mes}" placeholder="🔍 Buscar..." value="${filtros[mes].busq}" oninput="actualizarBusqueda('${mes}', this.value)">
+      <select id="est-${mes}" onchange="filtros['${mes}'].estado=this.value;renderMesConBusqueda('${mes}')">
+        <option value="">Todos los estados</option>
+        <option ${filtroEstado==='PAGADO'?'selected':''}>PAGADO</option>
+        <option ${filtroEstado==='PENDIENTE'?'selected':''}>PENDIENTE</option>
+        <option ${filtroEstado==='VENCIDO'?'selected':''}>VENCIDO</option>
+        <option ${filtroEstado==='CANCELADO'?'selected':''}>CANCELADO</option>
+      </select>
+      <select id="freq-${mes}" onchange="filtros['${mes}'].frec=this.value;renderMesConBusqueda('${mes}')">
+        <option value="">Todas las frecuencias</option>
+        <option ${filtroFrec==='MENSUAL'?'selected':''}>MENSUAL</option>
+        <option ${filtroFrec==='TRIMESTRAL'?'selected':''}>TRIMESTRAL</option>
+        <option ${filtroFrec==='SEMESTRAL'?'selected':''}>SEMESTRAL</option>
+        <option ${filtroFrec==='ANUAL'?'selected':''}>ANUAL</option>
+        <option ${filtroFrec==='CONTADO'?'selected':''}>CONTADO</option>
+        <option ${filtroFrec==='DEDUCCIÓN AUTOMÁTICA'?'selected':''}>DEDUCCIÓN AUTOMÁTICA</option>
+      </select>
+      <div style="display:flex;gap:4px;align-items:center;background:white;border:1px solid var(--gray-300);border-radius:6px;padding:4px 8px;">
+        <label style="font-size:11px;color:var(--gray-700);white-space:nowrap;">Vence:</label>
+        <input type="text" id="fdesde-${mes}" placeholder="01/02/2026" value="${filtros[mes].fechaDesde||''}" 
+          style="width:105px;border:none;padding:4px;font-size:12px;outline:none;" 
+          onchange="filtros['${mes}'].fechaDesde=this.value;renderMesConBusqueda('${mes}')"
+          maxlength="10">
+        <span style="color:var(--gray-400);">—</span>
+        <input type="text" id="fhasta-${mes}" placeholder="28/02/2026" value="${filtros[mes].fechaHasta||''}" 
+          style="width:105px;border:none;padding:4px;font-size:12px;outline:none;" 
+          onchange="filtros['${mes}'].fechaHasta=this.value;renderMesConBusqueda('${mes}')"
+          maxlength="10">
+        <button onclick="limpiarFiltroFechas('${mes}')" 
+          style="background:none;border:none;color:${(filtros[mes].fechaDesde||filtros[mes].fechaHasta)?'var(--danger)':'transparent'};cursor:pointer;padding:0 4px;font-size:14px;${!(filtros[mes].fechaDesde||filtros[mes].fechaHasta)?'pointer-events:none;':''}" 
+          title="Limpiar fechas vencimiento">✕</button>
+      </div>
+      <div style="display:flex;gap:4px;align-items:center;background:white;border:1px solid var(--gray-300);border-radius:6px;padding:4px 8px;">
+        <label style="font-size:11px;color:var(--gray-700);white-space:nowrap;">Pago:</label>
+        <input type="text" id="fpagodesde-${mes}" placeholder="01/02/2026" value="${filtros[mes].fechaPagoDesde||''}" 
+          style="width:105px;border:none;padding:4px;font-size:12px;outline:none;" 
+          onchange="filtros['${mes}'].fechaPagoDesde=this.value;renderMesConBusqueda('${mes}')"
+          maxlength="10">
+        <span style="color:var(--gray-400);">—</span>
+        <input type="text" id="fpagohasta-${mes}" placeholder="15/02/2026" value="${filtros[mes].fechaPagoHasta||''}" 
+          style="width:105px;border:none;padding:4px;font-size:12px;outline:none;" 
+          onchange="filtros['${mes}'].fechaPagoHasta=this.value;renderMesConBusqueda('${mes}')"
+          maxlength="10">
+        <button onclick="limpiarFiltroPago('${mes}')" 
+          style="background:none;border:none;color:${(filtros[mes].fechaPagoDesde||filtros[mes].fechaPagoHasta)?'var(--danger)':'transparent'};cursor:pointer;padding:0 4px;font-size:14px;${!(filtros[mes].fechaPagoDesde||filtros[mes].fechaPagoHasta)?'pointer-events:none;':''}" 
+          title="Limpiar fechas pago">✕</button>
+      </div>
+      <select id="ord-${mes}" onchange="filtros['${mes}'].orden=this.value;renderMesConBusqueda('${mes}')">
+        <option value="pago" ${tipoOrden==='pago'?'selected':''}>📅 Ord: Fecha Pago</option>
+        <option value="venc" ${tipoOrden==='venc'?'selected':''}>📅 Ord: Fecha Venc.</option>
+        <option value="nombre" ${tipoOrden==='nombre'?'selected':''}>👤 Ord: Nombre</option>
+        <option value="monto" ${tipoOrden==='monto'?'selected':''}>💰 Ord: Monto</option>
+        <option value="aseg" ${tipoOrden==='aseg'?'selected':''}>🏢 Ord: Aseguradora</option>
+      </select>
+      <button class="btn" onclick="limpiarTodosFiltros('${mes}')" style="background:var(--gray-200);color:var(--gray-700);border:1px solid var(--gray-300);" title="Limpiar todos los filtros">🔄 Reset</button>
+      <button class="btn success" onclick="abrirModal('${mes}')">+ Nueva Póliza</button>
+      <button class="btn" onclick="exportarExcel('${mes}')" style="background:#217346;color:white;border:none;" title="Exportar a Excel con filtros actuales">📊 Excel</button>
+    </div>
+    
+    <div class="table-container">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th><th>Nombre</th><th class="center">Acciones</th>
+              <th>Aseguradora</th><th>Tipo</th><th class="center">Póliza</th><th>Frecuencia</th>
+              <th class="center">F. Venc.</th><th class="center">F. Pago</th>
+              <th class="center">Estado</th><th class="center">Mon.</th>
+              <th class="right">Monto Bruto</th><th class="center">IVA</th>
+              <th class="right">Neto</th><th class="center">Com%</th>
+              <th class="right">Comisión</th><th class="right">Q1</th><th class="right">Q2</th>
+            </tr>
+          </thead>
+          <tbody>`;
+  
+  filtradas.forEach((p, i) => {
+    const estado = p.cancelada ? 'CANCELADO' : calcEstado(p.pago, p.venc);
+    const neto = calcNeto(p.monto, p.iva);
+    const comision = calcComision(p.monto, p.iva, p.com, p.pctCorredora);
+    const q = calcQuincena(p.pago, p.monto, p.iva, p.com, p.pctCorredora);
+    const simbolo = p.moneda === 'CRC' ? '₡' : '$';
+    
+    // Estilo de fila según estado
+    let estiloFila = '';
+    if (p.cancelada) {
+      estiloFila = 'background: #ffcdd2; opacity: 0.8;'; // Rojo claro para CANCELADAS (manual)
+    } else if (estado === 'PAGADO') {
+      estiloFila = 'background: #e8f5e9;'; // Verde claro para PAGADAS
+    } else if (estado === 'VENCIDO') {
+      estiloFila = 'background: #fff9c4;'; // Amarillo claro para VENCIDAS (10+ días)
+    }
+    // PENDIENTE = blanco (sin estilo)
+    
+    html += `
+      <tr style="${estiloFila}">
+        <td>${i + 1}</td>
+        <td><strong style="${p.cancelada ? 'text-decoration: line-through; color: #999;' : ''}">${p.nombre}</strong></td>
+        <td class="center">
+          <button class="btn small" onclick="editarPoliza('${mes}', '${p.id}')" title="Editar">✏️</button>
+          <button class="btn danger small" onclick="eliminarPoliza('${mes}', '${p.id}')" title="Eliminar">🗑️</button>
+          ${p.frec !== 'CONTADO' && p.frec !== 'DEDUCCIÓN AUTOMÁTICA' ? '<button class="btn small" onclick="programarSiguiente(\''+mes+'\', \''+p.id+'\')" style="background:#4CAF50;color:white;border:none;" title="Programar siguiente período según frecuencia">📅➕</button>' : ''}
+          ${p.clienteCedula ? '<button class="btn small" onclick="avisarDesdePoliza(\''+p.clienteCedula+'\')" style="background:#e8fdf0;border:1px solid #25D366;color:#128C7E;" title="Enviar recordatorio">📢</button>' : '<button class="btn small" style="background:var(--gray-100);border:1px solid var(--gray-300);color:#aaa;cursor:not-allowed;" title="Sin cliente vinculado">📢</button>'}
+          <label style="cursor:pointer;display:inline-flex;align-items:center;gap:4px;padding:4px 6px;background:${p.cancelada ? '#f44336' : 'var(--gray-200)'};border-radius:4px;font-size:11px;" title="${p.cancelada ? 'Póliza cancelada - Click para reactivar' : 'Click para marcar como cancelada'}">
+            <input type="checkbox" ${p.cancelada ? 'checked' : ''} onchange="toggleCancelada('${mes}', '${p.id}')" style="cursor:pointer;">
+            ${p.cancelada ? '❌' : '☑️'}
+          </label>
+        </td>
+        <td><strong>${p.aseg}</strong></td>
+        <td>${p.tipo || ''}</td>
+        <td class="center">${p.poliza}</td>
+        <td class="center">
+          <span class="freq-badge freq-${p.frec ? p.frec.toLowerCase().replace(/\s+/g, '') : 'mensual'}">${p.frec || 'MENSUAL'}</span>
+        </td>
+        <td class="center">${p.venc ? formatDateCR(p.venc) : ''}</td>
+        <td class="center" style="position: relative;">
+          <div style="display: flex; gap: 4px; align-items: center; justify-content: center;">
+            <input type="text" 
+              value="${p.pago ? formatDateCR(p.pago) : ''}" 
+              placeholder="DD/MM/AAAA"
+              onchange="actualizarPagoCR('${mes}', '${p.id}', this.value)"
+              onblur="validarFechaCR(this)"
+              style="font-size:11px; padding:4px 6px; width:100px; text-align:center;"
+              ${p.cancelada ? 'disabled' : ''}>
+            <button onclick="marcarHoy('${mes}', '${p.id}')" 
+              class="btn small" 
+              title="Marcar como pagado HOY"
+              style="padding: 2px 6px; font-size: 10px; background: var(--success);"
+              ${p.cancelada ? 'disabled' : ''}>
+              📅 Hoy
+            </button>
+            <button onclick="limpiarPago('${mes}', '${p.id}')" 
+              class="btn danger small" 
+              title="Limpiar fecha"
+              style="padding: 2px 6px; font-size: 10px;"
+              ${p.cancelada ? 'disabled' : ''}>
+              ✖
+            </button>
+          </div>
+        </td>
+        <td class="center"><span class="badge badge-${estado.toLowerCase()}">${estado}</span></td>
+        <td class="center">${p.moneda}</td>
+        <td class="right">${simbolo}${formatMoney(p.monto)}</td>
+        <td class="center">${(p.iva * 100).toFixed(0)}%</td>
+        <td class="right">${simbolo}${formatMoney(neto)}</td>
+        <td class="center">${(p.com * 100).toFixed(2)}%</td>
+        <td class="right" style="color:var(--success);font-weight:700;">${simbolo}${formatMoney(comision)}</td>
+        <td class="right" style="color:var(--success);">${q.q1 > 0 ? simbolo + formatMoney(q.q1) : '—'}</td>
+        <td class="right" style="color:var(--success);">${q.q2 > 0 ? simbolo + formatMoney(q.q2) : '—'}</td>
+      </tr>`;
+  });
+  
+  html += `
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div class="summary-section">
+      <h2>📊 Resumen Quincenal — ${MESES_NOMBRES[mes]} 2026</h2>
+      <table class="summary-table">
+        <thead><tr><th>Concepto</th><th class="right">Colones (₡)</th><th class="right">Dólares ($)</th></tr></thead>
+        <tbody>
+          <tr style="background: #DEEBFF;">
+            <td><strong>Pagadas 1ra Quincena</strong></td>
+            <td class="right"><strong>₡${formatMoney(totalQ1CRC)}</strong></td>
+            <td class="right"><strong>$${formatMoney(totalQ1USD)}</strong></td>
+          </tr>
+          <tr style="background: #E3FCEF;">
+            <td style="padding-left: 30px;">→ Tu Neto 1ra Quincena (80%)</td>
+            <td class="right" style="color: var(--success); font-weight: 700;">₡${formatMoney(totalQ1CRC * 0.8)}</td>
+            <td class="right" style="color: var(--success); font-weight: 700;">$${formatMoney(totalQ1USD * 0.8)}</td>
+          </tr>
+          <tr style="background: #FFFAE6;">
+            <td><strong>Pagadas 2da Quincena</strong></td>
+            <td class="right"><strong>₡${formatMoney(totalQ2CRC)}</strong></td>
+            <td class="right"><strong>$${formatMoney(totalQ2USD)}</strong></td>
+          </tr>
+          <tr style="background: #FFF0B3;">
+            <td style="padding-left: 30px;">→ Tu Neto 2da Quincena (80%)</td>
+            <td class="right" style="color: var(--success); font-weight: 700;">₡${formatMoney(totalQ2CRC * 0.8)}</td>
+            <td class="right" style="color: var(--success); font-weight: 700;">$${formatMoney(totalQ2USD * 0.8)}</td>
+          </tr>
+          <tr class="highlight" style="background: var(--gray-100); border-top: 2px solid var(--gray-700);">
+            <td><strong>TOTAL Pagado Mes</strong></td>
+            <td class="right"><strong>₡${formatMoney(totalCRC)}</strong></td>
+            <td class="right"><strong>$${formatMoney(totalUSD)}</strong></td>
+          </tr>
+          <tr><td>20% Corredora</td><td class="right">₡${formatMoney(totalCRC * 0.2)}</td><td class="right">$${formatMoney(totalUSD * 0.2)}</td></tr>
+          <tr class="highlight" style="background: #E3FCEF;">
+            <td><strong>TU NETO TOTAL MES (80%)</strong></td>
+            <td class="right"><strong style="color:var(--success); font-size: 16px;">₡${formatMoney(totalCRC * 0.8)}</strong></td>
+            <td class="right"><strong style="color:var(--success); font-size: 16px;">$${formatMoney(totalUSD * 0.8)}</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>`;
+  
+  document.getElementById('page-' + mes).innerHTML = html;
+}
+
+
+// Formatear fecha a DD/MM/YYYY desde cualquier formato
+function formatDateCR(dateStr) {
+  if (!dateStr) return '';
+  
+  // Si ya está en formato DD/MM/YYYY, devolverla tal cual
+  if (dateStr.includes('/') && dateStr.split('/').length === 3) {
+    const parts = dateStr.split('/');
+    if (parts[0].length <= 2) {
+      // Ya está en formato DD/MM/YYYY
+      const day = parts[0].padStart(2, '0');
+      const month = parts[1].padStart(2, '0');
+      const year = parts[2];
+      return `${day}/${month}/${year}`;
+    }
+  }
+  
+  // Intentar parsear formato YYYY-MM-DD
+  if (dateStr.includes('-')) {
+    const parts = dateStr.split('-');
+    if (parts.length === 3) {
+      // Detectar si es YYYY-MM-DD o DD-MM-YYYY o MM-DD-YYYY
+      if (parts[0].length === 4) {
+        // YYYY-MM-DD
+        const year = parts[0];
+        const month = parts[1].padStart(2, '0');
+        const day = parts[2].padStart(2, '0');
+        return `${day}/${month}/${year}`;
+      } else if (parts[2].length === 4) {
+        // DD-MM-YYYY o MM-DD-YYYY
+        const day = parts[0].padStart(2, '0');
+        const month = parts[1].padStart(2, '0');
+        const year = parts[2];
+        return `${day}/${month}/${year}`;
+      }
+    }
+  }
+  
+  // Limpiar formatos rotos como "10-022026"
+  const cleanStr = dateStr.replace(/[^0-9]/g, '');
+  if (cleanStr.length === 8) {
+    // Asumir formato DDMMYYYY
+    const day = cleanStr.substring(0, 2);
+    const month = cleanStr.substring(2, 4);
+    const year = cleanStr.substring(4, 8);
+    return `${day}/${month}/${year}`;
+  }
+  
+  // Si no se puede parsear, devolver la fecha original
+  return dateStr;
+}
+
+// Convertir cualquier formato de fecha a YYYY-MM-DD (formato ISO)
+function parseDateCR(dateStr) {
+  if (!dateStr) return '';
+  
+  // Si ya está en formato YYYY-MM-DD correcto
+  if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+    return dateStr;
+  }
+  
+  // Si es formato DD/MM/YYYY
+  if (dateStr.includes('/')) {
+    const parts = dateStr.split('/');
+    if (parts.length === 3) {
+      const day = parts[0].padStart(2, '0');
+      const month = parts[1].padStart(2, '0');
+      const year = parts[2];
+      return `${year}-${month}-${day}`;
+    }
+  }
+  
+  // Si es formato con guiones pero no ISO
+  if (dateStr.includes('-')) {
+    const parts = dateStr.split('-');
+    if (parts.length === 3) {
+      if (parts[0].length === 4) {
+        // Ya es YYYY-MM-DD, normalizar padding
+        const year = parts[0];
+        const month = parts[1].padStart(2, '0');
+        const day = parts[2].padStart(2, '0');
+        return `${year}-${month}-${day}`;
+      } else if (parts[2].length === 4) {
+        // DD-MM-YYYY o MM-DD-YYYY, asumir DD-MM-YYYY
+        const day = parts[0].padStart(2, '0');
+        const month = parts[1].padStart(2, '0');
+        const year = parts[2];
+        return `${year}-${month}-${day}`;
+      }
+    }
+  }
+  
+  // Limpiar y parsear números puros
+  const cleanStr = dateStr.replace(/[^0-9]/g, '');
+  if (cleanStr.length === 8) {
+    // Asumir DDMMYYYY
+    const day = cleanStr.substring(0, 2);
+    const month = cleanStr.substring(2, 4);
+    const year = cleanStr.substring(4, 8);
+    return `${year}-${month}-${day}`;
+  }
+  
+  return '';
+}
+
+// Validar y formatear fecha mientras se escribe
+function validarFechaCR(input) {
+  let value = input.value.replace(/[^0-9]/g, '');
+  if (value.length >= 2) {
+    value = value.substring(0, 2) + '/' + value.substring(2);
+  }
+  if (value.length >= 5) {
+    value = value.substring(0, 5) + '/' + value.substring(5);
+  }
+  if (value.length > 10) {
+    value = value.substring(0, 10);
+  }
+  input.value = value;
+}
+
+// Marcar como pagado hoy
+function marcarHoy(mes, id) {
+  const hoy = new Date().toISOString().split('T')[0];
+  actualizarPago(mes, id, hoy);
+}
+
+// Limpiar fecha de pago
+function limpiarPago(mes, id) {
+  if (confirm('¿Eliminar la fecha de pago?')) {
+    actualizarPago(mes, id, '');
+  }
+}
+
+// Actualizar pago con formato CR
+function actualizarPagoCR(mes, id, fechaCR) {
+  const fechaISO = parseDateCR(fechaCR);
+  actualizarPago(mes, id, fechaISO);
+}
+
+
+function actualizarPago(mes, id, fecha) {
+  const poliza = db.polizas[mes].find(p => p.id === id);
+  if (poliza) { poliza.pago = fecha; guardarDB(); renderMes(mes); }
+}
+
+// ===== CONFIGURACIÓN PERFIL AGENTE =====
+function previsualizarFoto(input) {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const preview = document.getElementById('preview-foto');
+      preview.innerHTML = '<img src="' + e.target.result + '" style="width: 100%; height: 100%; object-fit: cover;">';
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+function eliminarFoto() {
+  if (confirm('¿Estás seguro de eliminar tu foto de perfil?')) {
+    localStorage.removeItem('agente_foto');
+    document.getElementById('preview-foto').innerHTML = (localStorage.getItem('agente_nombre') || '?')[0].toUpperCase();
+    document.getElementById('config-agente-foto').value = '';
+    alert('✓ Foto eliminada');
+  }
+}
+
+function abrirConfigPerfil() {
+  document.getElementById('config-agente-nombre').value = localStorage.getItem('agente_nombre') || '';
+  document.getElementById('config-agente-telefono').value = localStorage.getItem('agente_telefono') || '';
+  document.getElementById('config-agente-email').value = localStorage.getItem('agente_email') || '';
+  document.getElementById('config-agente-direccion').value = localStorage.getItem('agente_direccion') || '';
+  document.getElementById('config-agente-web').value = localStorage.getItem('agente_web') || '';
+  
+  // Actualizar preview de foto
+  const preview = document.getElementById('preview-foto');
+  if (localStorage.getItem('agente_foto')) {
+    preview.innerHTML = '<img src="' + localStorage.getItem('agente_foto') + '" style="width: 100%; height: 100%; object-fit: cover;">';
+  } else {
+    preview.innerHTML = (localStorage.getItem('agente_nombre') || '?')[0].toUpperCase();
+  }
+  
+  document.getElementById('modal-config-perfil').classList.add('open');
+}
+
+function cerrarConfigPerfil() {
+  document.getElementById('modal-config-perfil').classList.remove('open');
+}
+
+function guardarConfigPerfil() {
+  const nombre = document.getElementById('config-agente-nombre').value.trim();
+  if (!nombre) {
+    alert('Por favor ingresa tu nombre completo');
+    return;
+  }
+  
+  // Guardar foto si se subió una nueva
+  const inputFoto = document.getElementById('config-agente-foto');
+  if (inputFoto.files && inputFoto.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      localStorage.setItem('agente_foto', e.target.result);
+      guardarRestoPerfil(nombre);
+    };
+    reader.readAsDataURL(inputFoto.files[0]);
+  } else {
+    guardarRestoPerfil(nombre);
+  }
+}
+
+function guardarRestoPerfil(nombre) {
+  localStorage.setItem('agente_nombre', nombre);
+  localStorage.setItem('agente_telefono', document.getElementById('config-agente-telefono').value.trim());
+  localStorage.setItem('agente_email', document.getElementById('config-agente-email').value.trim());
+  localStorage.setItem('agente_direccion', document.getElementById('config-agente-direccion').value.trim());
+  localStorage.setItem('agente_web', document.getElementById('config-agente-web').value.trim());
+  
+  cerrarConfigPerfil();
+  renderDashboard(); // Actualizar dashboard con nueva info
+  alert('✓ Perfil guardado correctamente');
+}
+
+// ===== CONFIGURACIÓN % CORREDORA =====
+function getDefaultPctCorredora() {
+  return parseFloat(localStorage.getItem('pct_corredora_default') || '0.20');
+}
+
+function abrirConfigCorredora() {
+  const defaultPct = getDefaultPctCorredora();
+  document.getElementById('config-corredora-default').value = (defaultPct * 100).toFixed(2);
+  document.getElementById('modal-config-corredora').classList.add('open');
+}
+
+function cerrarConfigCorredora() {
+  document.getElementById('modal-config-corredora').classList.remove('open');
+}
+
+function guardarConfigCorredora() {
+  const valor = parseFloat(document.getElementById('config-corredora-default').value);
+  if (isNaN(valor) || valor < 0 || valor > 100) {
+    alert('Por favor ingrese un porcentaje válido entre 0 y 100');
+    return;
+  }
+  const decimal = valor / 100;
+  localStorage.setItem('pct_corredora_default', decimal.toString());
+  cerrarConfigCorredora();
+  alert(`✓ Configuración guardada: ${valor}% para corredora, ${(100-valor).toFixed(2)}% para ti`);
+}
+
+function guardarPctCorrectoraDashboard() {
+  const valor = parseFloat(document.getElementById('dashboard-pct-corredora').value);
+  if (isNaN(valor) || valor < 0 || valor > 100) {
+    alert('Por favor ingrese un porcentaje válido entre 0 y 100');
+    return;
+  }
+  const decimal = valor / 100;
+  localStorage.setItem('pct_corredora_default', decimal.toString());
+  alert(`✓ Configuración guardada: ${valor}% para corredora, ${(100-valor).toFixed(2)}% para ti\n\nEste porcentaje se aplicará automáticamente a todas las pólizas nuevas.`);
+  renderDashboard(); // Actualizar el dashboard
+}
+
+function abrirModal(mes) {
+  editandoId = null;
+  editandoMes = mes;
+  
+  document.getElementById('modal-title').textContent = '➕ Nueva Póliza — ' + MESES_NOMBRES[mes];
+  document.getElementById('f-mes').value = mes;
+  
+  ['f-nombre', 'f-poliza', 'f-venc', 'f-pago', 'f-monto'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  
+  document.getElementById('f-aseg').selectedIndex = 0;
+  document.getElementById('f-tipo').value = '';
+  document.getElementById('f-frec').value = 'MENSUAL';
+  document.getElementById('f-moneda').value = 'CRC';
+  document.getElementById('f-iva').value = '0.13';
+  document.getElementById('f-com').value = '13'; // Valor por defecto en porcentaje
+  document.getElementById('f-corredora').value = (getDefaultPctCorredora() * 100).toFixed(2); // % corredora por defecto
+  
+  document.getElementById('modal-poliza').classList.add('open');
+}
+
+function editarPoliza(mes, id) {
+  const p = db.polizas[mes].find(pol => pol.id === id);
+  if (!p) return;
+  
+  editandoId = id;
+  editandoMes = mes;
+  
+  document.getElementById('modal-title').textContent = '✏️ Editar Póliza';
+  document.getElementById('f-aseg').value = p.aseg;
+  document.getElementById('f-tipo').value = p.tipo || '';
+  document.getElementById('f-nombre').value = p.nombre;
+  document.getElementById('f-poliza').value = p.poliza;
+  document.getElementById('f-frec').value = p.frec;
+  document.getElementById('f-venc').value = p.venc ? formatDateCR(p.venc) : '';
+  document.getElementById('f-pago').value = p.pago ? formatDateCR(p.pago) : '';
+  document.getElementById('f-moneda').value = p.moneda;
+  document.getElementById('f-monto').value = p.monto;
+  document.getElementById('f-iva').value = p.iva;
+  // Convertir de decimal a porcentaje para mostrar (ej: 0.15 → 15)
+  document.getElementById('f-com').value = p.com < 1 ? p.com * 100 : p.com;
+  document.getElementById('f-corredora').value = p.pctCorredora !== undefined ? (p.pctCorredora * 100).toFixed(2) : (getDefaultPctCorredora() * 100).toFixed(2);
+  document.getElementById('f-mes').value = mes;
+  
+  document.getElementById('modal-poliza').classList.add('open');
+}
+
+function cerrarModal() {
+  document.getElementById('modal-poliza').classList.remove('open');
+}
+
+function eliminarPoliza(mes, id) {
+  if (!confirm('¿Estás seguro de eliminar esta póliza?')) return;
+  db.polizas[mes] = db.polizas[mes].filter(p => p.id !== id);
+  guardarDB();
+  renderMes(mes);
+}
+
+function guardarPoliza() {
+  const mes = document.getElementById('f-mes').value;
+  
+  // Convertir el porcentaje de comisión a decimal (ej: 15 → 0.15)
+  let comisionPorcentaje = parseFloat(document.getElementById('f-com').value) || 0;
+  let comisionDecimal = comisionPorcentaje > 1 ? comisionPorcentaje / 100 : comisionPorcentaje;
+  
+  // Convertir el porcentaje de corredora a decimal (ej: 20 → 0.20)
+  let corregoraPorcentaje = parseFloat(document.getElementById('f-corredora').value) || (getDefaultPctCorredora() * 100);
+  let corregoraDecimal = corregoraPorcentaje > 1 ? corregoraPorcentaje / 100 : corregoraPorcentaje;
+  
+  const poliza = {
+    id: editandoId || (mes + '_' + Date.now()),
+    aseg: document.getElementById('f-aseg').value,
+    tipo: document.getElementById('f-tipo').value,
+    nombre: document.getElementById('f-nombre').value.trim(),
+    poliza: document.getElementById('f-poliza').value.trim(),
+    frec: document.getElementById('f-frec').value,
+    venc: document.getElementById('f-venc').value,
+    pago: document.getElementById('f-pago').value,
+    moneda: document.getElementById('f-moneda').value,
+    monto: parseFloat(document.getElementById('f-monto').value) || 0,
+    iva: parseFloat(document.getElementById('f-iva').value) || 0,
+    com: comisionDecimal,
+    pctCorredora: corregoraDecimal
+  };
+  
+  if (!poliza.nombre || !poliza.aseg || !poliza.poliza) {
+    alert('Por favor completa los campos obligatorios (Aseguradora, Nombre y N° Póliza)');
+    return;
+  }
+  
+  const esPolizaNueva = !editandoId;
+  
+  if (editandoId && editandoMes) {
+    const idx = db.polizas[editandoMes].findIndex(p => p.id === editandoId);
+    if (editandoMes !== mes) {
+      db.polizas[editandoMes].splice(idx, 1);
+      db.polizas[mes].push(poliza);
+    } else {
+      db.polizas[editandoMes][idx] = poliza;
+    }
+  } else {
+    db.polizas[mes].push(poliza);
+  }
+  
+  guardarDB();
+  
+  // Si es una póliza nueva Y es recurrente, generar automáticamente las siguientes ocurrencias
+  if (esPolizaNueva && poliza.frec !== 'CONTADO' && poliza.frec !== 'DEDUCCIÓN AUTOMÁTICA') {
+    generarRecurrenciasDesdePóliza(poliza, mes);
+  }
+  
+  cerrarModal();
+  renderMes(mesActual);
+}
+
+// Nueva función para generar recurrencias de una póliza específica
+function generarRecurrenciasDesdePóliza(polizaOriginal, mesOrigen) {
+  const mesesArray = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+  
+  // Determinar cuántos meses sumar según frecuencia
+  let mesesASumar = 0;
+  if (polizaOriginal.frec === 'MENSUAL') mesesASumar = 1;
+  else if (polizaOriginal.frec === 'TRIMESTRAL') mesesASumar = 3;
+  else if (polizaOriginal.frec === 'SEMESTRAL') mesesASumar = 6;
+  else if (polizaOriginal.frec === 'ANUAL') mesesASumar = 12;
+  else return;
+  
+  // Parsear fecha de vencimiento
+  let fechaVencStr = polizaOriginal.venc;
+  if (fechaVencStr.includes('/')) {
+    const partes = fechaVencStr.split('/');
+    if (partes.length === 3) {
+      fechaVencStr = `${partes[2]}-${partes[1].padStart(2,'0')}-${partes[0].padStart(2,'0')}`;
+    }
+  }
+  
+  const fechaVencOriginal = new Date(fechaVencStr + 'T12:00:00');
+  if (isNaN(fechaVencOriginal.getTime())) return;
+  
+  const anioActual = 2026;
+  const mesInicial = fechaVencOriginal.getMonth();
+  const diaVencimiento = fechaVencOriginal.getDate();
+  
+  let mesActual = mesInicial;
+  let contador = 0;
+  let recurrenciasCreadas = 0;
+  
+  while (contador < 12) {
+    mesActual += mesesASumar;
+    if (mesActual > 11) break; // No generar para 2027
+    
+    const nuevaFecha = new Date(anioActual, mesActual, diaVencimiento, 12, 0, 0);
+    if (nuevaFecha.getDate() !== diaVencimiento) {
+      nuevaFecha.setDate(0);
+    }
+    
+    const nuevaFechaISO = nuevaFecha.toISOString().split('T')[0];
+    const mesDestino = mesesArray[mesActual];
+    
+    const nuevaPoliza = {
+      id: 'recur_' + polizaOriginal.id + '_' + contador,
+      aseg: polizaOriginal.aseg,
+      tipo: polizaOriginal.tipo,
+      nombre: polizaOriginal.nombre,
+      poliza: polizaOriginal.poliza,
+      frec: polizaOriginal.frec,
+      venc: nuevaFechaISO,
+      pago: '',
+      moneda: polizaOriginal.moneda,
+      monto: polizaOriginal.monto,
+      iva: polizaOriginal.iva,
+      com: polizaOriginal.com,
+      pctCorredora: polizaOriginal.pctCorredora,
+      clienteCedula: polizaOriginal.clienteCedula || ''
+    };
+    
+    if (!db.polizas[mesDestino]) db.polizas[mesDestino] = [];
+    db.polizas[mesDestino].push(nuevaPoliza);
+    recurrenciasCreadas++;
+    
+    contador++;
+  }
+  
+  guardarDB();
+  
+  if (recurrenciasCreadas > 0) {
+    alert(`✅ Póliza creada!\n\n📅 Se generaron automáticamente ${recurrenciasCreadas} ocurrencias para el resto de 2026 según la frecuencia ${polizaOriginal.frec}.`);
+  }
+}
+
+function renderDashboard() {
+  let totalAnualCRC = 0, totalAnualUSD = 0, totalPolizas = 0;
+  let tablaHTML = '';
+  
+  Object.keys(MESES_NOMBRES).forEach(mes => {
+    const polizas = db.polizas[mes] || [];
+    let crc = 0, usd = 0, pagadas = 0, pendientes = 0;
+    
+    polizas.forEach(p => {
+      const q = calcQuincena(p.pago, p.monto, p.iva, p.com, p.pctCorredora);
+      if (p.moneda === 'CRC') crc += q.q1 + q.q2;
+      else usd += q.q1 + q.q2;
+      const estado = calcEstado(p.pago, p.venc);
+      if (estado === 'PAGADO') pagadas++; else pendientes++;
+    });
+    
+    totalAnualCRC += crc;
+    totalAnualUSD += usd;
+    totalPolizas += polizas.length;
+    
+    tablaHTML += `<tr>
+      <td><strong>${MESES_NOMBRES[mes]}</strong></td>
+      <td class="right">₡${formatMoney(crc)}</td>
+      <td class="right">$${formatMoney(usd)}</td>
+      <td class="right">₡${formatMoney(crc * 0.8)}</td>
+      <td class="center"><span class="badge badge-pagado">${pagadas}</span></td>
+      <td class="center"><span class="badge badge-pendiente">${pendientes}</span></td>
+      <td class="center">${polizas.length}</td>
+    </tr>`;
+  });
+  
+  const html = `
+    <div class="stat-card" style="background: linear-gradient(135deg, #2E5C8A 0%, #1e3f5a 100%); color: white; margin-bottom: 24px; padding: 20px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div style="flex: 1;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <div id="dashboard-avatar" style="width: 80px; height: 80px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; font-size: 36px; font-weight: 700; color: var(--primary); overflow: hidden; border: 3px solid rgba(255,255,255,0.3);">
+              ${localStorage.getItem('agente_foto') ? 
+                '<img src="' + localStorage.getItem('agente_foto') + '" style="width: 100%; height: 100%; object-fit: cover;">' : 
+                (localStorage.getItem('agente_nombre') || 'A')[0].toUpperCase()}
+            </div>
+            <div>
+              <div style="font-size: 22px; font-weight: 700; margin-bottom: 4px;">${localStorage.getItem('agente_nombre') || 'Configurar perfil'}</div>
+              <div style="font-size: 13px; opacity: 0.85;">${localStorage.getItem('agente_email') || 'correo@ejemplo.com'}</div>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; font-size: 13px;">
+            <div><span style="opacity: 0.85;">📱</span> ${localStorage.getItem('agente_telefono') || 'No configurado'}</div>
+            <div><span style="opacity: 0.85;">📍</span> ${localStorage.getItem('agente_direccion') || 'No configurado'}</div>
+            ${localStorage.getItem('agente_web') ? '<div style="grid-column: span 2;"><span style="opacity: 0.85;">🌐</span> ' + localStorage.getItem('agente_web') + '</div>' : ''}
+          </div>
+        </div>
+        <button onclick="abrirConfigPerfil()" 
+                style="background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.4); padding: 10px 16px; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 13px; white-space: nowrap;">
+          ✏️ Editar Perfil
+        </button>
+      </div>
+    </div>
+    
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-label">Total Anual CRC</div><div class="stat-value">₡${formatMoney(totalAnualCRC)}</div></div>
+      <div class="stat-card"><div class="stat-label">Total Anual USD</div><div class="stat-value">$${formatMoney(totalAnualUSD)}</div></div>
+      <div class="stat-card"><div class="stat-label">Neto Anual 80% CRC</div><div class="stat-value green">₡${formatMoney(totalAnualCRC * 0.8)}</div></div>
+      <div class="stat-card"><div class="stat-label">Total Pólizas</div><div class="stat-value">${totalPolizas}</div></div>
+    </div>
+    
+    <div class="stat-card" style="background: linear-gradient(135deg, #00875A 0%, #006644 100%); color: white; margin-bottom: 24px; padding: 20px;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <div style="font-size: 14px; opacity: 0.9; margin-bottom: 8px;">⚙️ Configuración de Comisiones</div>
+          <div style="font-size: 13px; opacity: 0.85; margin-bottom: 12px;">% que se queda la corredora (tu porcentaje es el restante)</div>
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <input type="number" id="dashboard-pct-corredora" step="0.01" min="0" max="100" 
+                   value="${(getDefaultPctCorredora() * 100).toFixed(2)}"
+                   style="width: 100px; padding: 10px; font-size: 16px; font-weight: 700; border: 2px solid white; border-radius: 6px; text-align: center;"
+                   placeholder="20">
+            <span style="font-size: 16px; font-weight: 700;">%</span>
+            <button onclick="guardarPctCorrectoraDashboard()" 
+                    style="background: white; color: #00875A; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 14px;">
+              💾 Guardar
+            </button>
+          </div>
+          <div style="font-size: 12px; opacity: 0.85; margin-top: 8px;">
+            📌 Tú recibes: <strong style="font-size: 18px; color: #FFEB3B;">${(100 - getDefaultPctCorredora() * 100).toFixed(2)}%</strong> de cada comisión
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="summary-section">
+      <h2>📊 Resumen Anual 2026</h2>
+      <table class="summary-table">
+        <thead><tr><th>Mes</th><th class="right">Comisión CRC</th><th class="right">Comisión USD</th><th class="right">Neto 80% CRC</th><th class="center">Pagadas</th><th class="center">Pendientes</th><th class="center">Total Pólizas</th></tr></thead>
+        <tbody>
+          ${tablaHTML}
+          <tr style="background:var(--primary);color:white;font-weight:700;">
+            <td><strong>TOTAL AÑO</strong></td>
+            <td class="right">₡${formatMoney(totalAnualCRC)}</td>
+            <td class="right">$${formatMoney(totalAnualUSD)}</td>
+            <td class="right">₡${formatMoney(totalAnualCRC * 0.8)}</td>
+            <td colspan="3" class="center">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>`;
+  
+  document.getElementById('page-dashboard').innerHTML = html;
+}
+
+document.getElementById('current-date').textContent = new Date().toLocaleDateString('es-CR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+// ===== INICIO MES ACTUAL =====
+const _mesInicial = _MESES[new Date().getMonth()];
+mesActual = _mesInicial;
+document.querySelectorAll('.tab-btn').forEach(b => {
+  b.classList.remove('active');
+  if (b.textContent.toLowerCase().includes(_mesInicial)) b.classList.add('active');
+});
+
+document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+const _pInit = document.getElementById('page-' + _mesInicial);
+if (_pInit) _pInit.classList.add('active');
+renderMes(_mesInicial);
+
+// ===== MÓDULO CLIENTES =====
+let clienteEditIndex = null;
+let clienteAvisarIndex = null;
+
+function cargarClientes() {
+  try { return JSON.parse(localStorage.getItem('clientes_db') || '[]'); } catch(e) { return []; }
+}
+function guardarClientesDB(arr) { localStorage.setItem('clientes_db', JSON.stringify(arr)); }
+
+// Inicializar clientes de ejemplo si no existen
+if (!localStorage.getItem('clientes_db')) {
+  const clientesIniciales = [
+    {
+      cedula: '3101362116',
+      nombre: 'DANIEL',
+      ap1: 'DE LOS ANGELES ARIAS',
+      ap2: 'ZUMBADO',
+      tel: '8702-2141',
+      email: 'dariasz.indtools@gmail.com',
+      obs: ''
+    }
+  ];
+  guardarClientesDB(clientesIniciales);
+}
+
+// Interceptar cambiarTab para renderizar clientes
+const _origCambiarTab = cambiarTab;
+cambiarTab = function(s, b) { _origCambiarTab(s, b); if (s === 'clientes') renderClientes(); };
+
+// Auto-detectar mes por fecha vencimiento
+function autoDetectarMes(val) {
+  const p = val.split('/');
+  if (p.length === 3 && p[1] && p[1].length <= 2) {
+    const idx = parseInt(p[1]) - 1;
+    if (idx >= 0 && idx < 12) document.getElementById('f-mes').value = _MESES[idx];
+  }
+}
+
+// ===== RENDER CLIENTES =====
+function renderClientes() {
+  const todos = cargarClientes();
+  const busq = (document.getElementById('busq-clientes') ? document.getElementById('busq-clientes').value : '').toLowerCase().trim();
+  const lista = todos.filter(c => !busq || (c.cedula + ' ' + c.nombre + ' ' + c.ap1 + ' ' + c.ap2 + ' ' + c.email + ' ' + c.tel).toLowerCase().includes(busq));
+
+  const polPorCli = {};
+  Object.entries(db.polizas || {}).forEach(function(entry) {
+    var mes = entry[0]; var arr = entry[1];
+    arr.forEach(function(p) {
+      if (!p.clienteCedula) return;
+      if (!polPorCli[p.clienteCedula]) polPorCli[p.clienteCedula] = [];
+      polPorCli[p.clienteCedula].push(Object.assign({}, p, {mes: mes}));
+    });
+  });
+
+  var html = '<div class="clientes-toolbar">' +
+    '<input type="text" id="busq-clientes" placeholder="Buscar por nombre, cedula o email..." oninput="renderClientes()" value="' + busq + '">' +
+    '<button class="btn success" onclick="abrirModalCliente()">+ Nuevo Cliente</button></div>' +
+    '<div class="clientes-grid">';
+
+  if (lista.length === 0) {
+    html += '<div class="clientes-empty"><div class="emp-icon">&#128101;</div>' +
+      '<h3>' + (busq ? 'Sin resultados' : 'No hay clientes registrados') + '</h3>' +
+      '<p>' + (busq ? 'Intenta otro termino' : 'Usa "+ Nuevo Cliente" para comenzar') + '</p></div>';
+  } else {
+    lista.forEach(function(c) {
+      var idx = todos.indexOf(c);
+      var nombre = [c.nombre, c.ap1, c.ap2].filter(Boolean).join(' ');
+      var pols = polPorCli[c.cedula] || [];
+      var telLimpio = (c.tel || '').replace(/[\s\-\(\)\.]/g, '');
+      var telWA = telLimpio ? (telLimpio.startsWith('506') ? telLimpio : '506' + telLimpio) : '';
+      var tieneWA = !!telWA;
+      var tieneEmail = !!c.email;
+
+      var btnWA = tieneWA
+        ? '<button class="btn-cli-wa" onclick="abrirModalAvisar(' + idx + ',\'wa\')">&#128241; WhatsApp</button>'
+        : '<button class="btn-cli-wa" style="opacity:0.4;cursor:not-allowed" onclick="abrirModalCliente(' + idx + ')">&#128241; WhatsApp</button>';
+      var btnEmail = tieneEmail
+        ? '<button class="btn-cli-mail" onclick="abrirModalAvisar(' + idx + ',\'email\')">&#9993;&#65039; Email</button>'
+        : '<button class="btn-cli-mail" style="opacity:0.4;cursor:not-allowed" onclick="abrirModalCliente(' + idx + ')">&#9993;&#65039; Email</button>';
+
+      html += '<div class="cliente-card">' +
+        '<div class="cli-cedula">&#129330;&#65039; ' + (c.cedula || 'Sin cedula') + '</div>' +
+        '<div class="cli-nombre">' + (nombre || 'Sin nombre') + '</div>' +
+        '<div class="cli-row">' + (c.tel ? '&#128241; ' + c.tel : '<span style="color:#bbb;font-style:italic">Sin telefono</span>') + '</div>' +
+        '<div class="cli-row">' + (c.email ? '&#9993;&#65039; ' + c.email : '<span style="color:#bbb;font-style:italic">Sin correo</span>') + '</div>' +
+        (c.obs ? '<div class="cli-row" style="font-style:italic">&#128221; ' + c.obs + '</div>' : '') +
+        '<div class="cli-polizas">&#128203; ' + pols.length + ' poliza' + (pols.length !== 1 ? 's' : '') + ' vinculada' + (pols.length !== 1 ? 's' : '') + '</div>' +
+        '<div class="cli-actions">' + btnWA + btnEmail +
+        '<button class="btn-cli-edit" onclick="abrirModalCliente(' + idx + ')">&#9999;&#65039; Editar</button>' +
+        '<button class="btn-cli-del" onclick="eliminarCliente(' + idx + ')">&#128465;&#65039;</button>' +
+        '</div></div>';
+    });
+  }
+  html += '</div>';
+  document.getElementById('page-clientes').innerHTML = html;
+}
+
+// ===== MODAL CLIENTE =====
+function abrirModalCliente(index) {
+  clienteEditIndex = (index !== undefined && index !== null) ? index : null;
+  var c = clienteEditIndex !== null ? cargarClientes()[clienteEditIndex] : {};
+  document.getElementById('modal-cliente-titulo').textContent = clienteEditIndex !== null ? 'Editar Cliente' : 'Nuevo Cliente';
+  document.getElementById('fc-cedula').value = c.cedula || '';
+  document.getElementById('fc-nombre').value = c.nombre || '';
+  document.getElementById('fc-ap1').value = c.ap1 || '';
+  document.getElementById('fc-ap2').value = c.ap2 || '';
+  document.getElementById('fc-tel').value = c.tel || '';
+  document.getElementById('fc-email').value = c.email || '';
+  document.getElementById('fc-obs').value = c.obs || '';
+  document.getElementById('modal-cliente').classList.add('open');
+  setTimeout(function() { document.getElementById('fc-cedula').focus(); }, 100);
+}
+
+function cerrarModalCliente() {
+  document.getElementById('modal-cliente').classList.remove('open');
+  clienteEditIndex = null;
+}
+
+function guardarCliente() {
+  var cedula = document.getElementById('fc-cedula').value.trim();
+  var nombre = document.getElementById('fc-nombre').value.trim();
+  var ap1 = document.getElementById('fc-ap1').value.trim();
+  if (!cedula || !nombre || !ap1) { alert('Cedula, Nombre y Primer Apellido son obligatorios'); return; }
+  var clientes = cargarClientes();
+  if (clienteEditIndex === null && clientes.some(function(c) { return c.cedula === cedula; })) {
+    alert('Ya existe un cliente con la cedula ' + cedula); return;
+  }
+  var cliente = { cedula: cedula, nombre: nombre, ap1: ap1,
+    ap2: document.getElementById('fc-ap2').value.trim(),
+    tel: document.getElementById('fc-tel').value.trim(),
+    email: document.getElementById('fc-email').value.trim(),
+    obs: document.getElementById('fc-obs').value.trim() };
+  if (clienteEditIndex !== null) clientes[clienteEditIndex] = cliente;
+  else clientes.push(cliente);
+  guardarClientesDB(clientes);
+  cerrarModalCliente();
+  if (document.getElementById('modal-poliza').classList.contains('open')) {
+    seleccionarClienteParaPoliza(cedula);
+  } else {
+    renderClientes();
+  }
+}
+
+function eliminarCliente(idx) {
+  var clientes = cargarClientes();
+  var c = clientes[idx];
+  var nombre = [c.nombre, c.ap1, c.ap2].filter(Boolean).join(' ');
+  if (!confirm('Eliminar cliente "' + nombre + '"?')) return;
+  clientes.splice(idx, 1);
+  guardarClientesDB(clientes);
+  renderClientes();
+}
+
+// ===== BUSCAR CLIENTE para poliza =====
+function abrirModalBuscarCli() {
+  document.getElementById('input-buscar-cli').value = '';
+  filtrarListaClientes('');
+  document.getElementById('modal-buscar-cli').classList.add('open');
+  setTimeout(function() { document.getElementById('input-buscar-cli').focus(); }, 100);
+}
+
+function cerrarModalBuscarCli() { document.getElementById('modal-buscar-cli').classList.remove('open'); }
+
+function filtrarListaClientes(busq) {
+  var clientes = cargarClientes();
+  var q = busq.toLowerCase().trim();
+  var filtrados = clientes.filter(function(c) {
+    return !q || (c.cedula + ' ' + c.nombre + ' ' + c.ap1 + ' ' + c.ap2).toLowerCase().includes(q);
+  });
+  var lista = document.getElementById('lista-buscar-cli');
+  var html = filtrados.length === 0 && q ? '<div style="padding:12px 16px;color:#666;font-size:13px;">No encontrado</div>' : '';
+  html += filtrados.map(function(c) {
+    var nombre = [c.nombre, c.ap1, c.ap2].filter(Boolean).join(' ');
+    return '<div class="item-cliente-busqueda" onclick="seleccionarClienteParaPoliza(\'' + c.cedula + '\')">' +
+      '<div><strong>' + nombre + '</strong></div>' +
+      '<div class="ced">&#129330;&#65039; ' + c.cedula + (c.tel ? ' &#128241; ' + c.tel : '') + '</div></div>';
+  }).join('');
+  html += '<div style="padding:10px 16px;background:var(--gray-50);border-top:1px solid var(--gray-200);">' +
+    '<button class="buscar-cliente-btn" style="background:white;" onclick="cerrarModalBuscarCli();setTimeout(function(){abrirModalCliente();},200)">+ Crear nuevo cliente</button></div>';
+  lista.innerHTML = html;
+}
+
+function seleccionarClienteParaPoliza(cedula) {
+  var clientes = cargarClientes();
+  var c = clientes.find(function(x) { return x.cedula === cedula; });
+  if (!c) return;
+  var nombre = [c.nombre, c.ap1, c.ap2].filter(Boolean).join(' ');
+  document.getElementById('f-cliente-cedula').value = cedula;
+  document.getElementById('f-nombre').value = nombre;
+  document.getElementById('cliente-ligado-display').innerHTML =
+    '<div class="cliente-ligado"><span>OK <strong>' + nombre + '</strong> - ' + cedula + '</span>' +
+    '<span class="quitar" onclick="quitarClientePoliza()">X</span></div>';
+  cerrarModalBuscarCli();
+}
+
+function quitarClientePoliza() {
+  document.getElementById('f-cliente-cedula').value = '';
+  document.getElementById('cliente-ligado-display').innerHTML =
+    '<button type="button" class="buscar-cliente-btn" onclick="abrirModalBuscarCli()">Buscar y vincular cliente...</button>';
+}
+
+// ===== GUARDAR POLIZA con cliente =====
+function guardarPoliza() {
+  var nombre = document.getElementById('f-nombre').value.trim();
+  var poliza = document.getElementById('f-poliza').value.trim();
+  if (!nombre || !poliza) { alert('Nombre y N de Poliza son obligatorios'); return; }
+
+  var comPct = parseFloat(document.getElementById('f-com').value) || 0;
+  var comDec = comPct > 1 ? comPct / 100 : comPct;
+  var mes = document.getElementById('f-mes').value;
+  var vencVal = document.getElementById('f-venc').value.trim();
+  if (vencVal) {
+    var p = vencVal.split('/');
+    if (p.length === 3) {
+      var mi = parseInt(p[1]) - 1;
+      if (mi >= 0 && mi < 12) { mes = _MESES[mi]; document.getElementById('f-mes').value = mes; }
+    }
+  }
+
+  var nuevaPoliza = {
+    id: editandoId || (mes + '_' + Date.now()),
+    aseg: document.getElementById('f-aseg').value,
+    tipo: document.getElementById('f-tipo').value,
+    nombre: nombre, poliza: poliza,
+    clienteCedula: document.getElementById('f-cliente-cedula').value,
+    frec: document.getElementById('f-frec').value,
+    venc: vencVal,
+    pago: document.getElementById('f-pago').value.trim(),
+    moneda: document.getElementById('f-moneda').value,
+    monto: parseFloat(document.getElementById('f-monto').value) || 0,
+    iva: parseFloat(document.getElementById('f-iva').value) || 0,
+    com: comDec
+  };
+
+  if (editandoId && editandoMes) {
+    var idx = db.polizas[editandoMes].findIndex(function(p) { return p.id === editandoId; });
+    if (idx !== -1) {
+      if (editandoMes !== mes) {
+        db.polizas[editandoMes].splice(idx, 1);
+        if (!db.polizas[mes]) db.polizas[mes] = [];
+        db.polizas[mes].push(nuevaPoliza);
+      } else { db.polizas[editandoMes][idx] = nuevaPoliza; }
+    }
+  } else {
+    if (!db.polizas[mes]) db.polizas[mes] = [];
+    db.polizas[mes].push(nuevaPoliza);
+  }
+
+  guardarDB();
+  cerrarModal();
+  mesActual = mes;
+  document.querySelectorAll('.tab-btn').forEach(function(b) {
+    b.classList.remove('active');
+    if (b.textContent.toLowerCase().includes(mes)) b.classList.add('active');
+  });
+  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+  var dest = document.getElementById('page-' + mes);
+  if (dest) dest.classList.add('active');
+  renderMes(mes);
+}
+
+// Override abrirModal y editarPoliza para manejar cliente
+var _origAbrirModal2 = abrirModal;
+abrirModal = function(mes) {
+  _origAbrirModal2(mes);
+  document.getElementById('f-cliente-cedula').value = '';
+  document.getElementById('cliente-ligado-display').innerHTML =
+    '<button type="button" class="buscar-cliente-btn" onclick="abrirModalBuscarCli()">Buscar y vincular cliente...</button>';
+};
+
+var _origEditarPoliza2 = editarPoliza;
+editarPoliza = function(mes, id) {
+  _origEditarPoliza2(mes, id);
+  var p = db.polizas[mes].find(function(x) { return x.id === id; });
+  if (p && p.clienteCedula) {
+    var clientes = cargarClientes();
+    var c = clientes.find(function(x) { return x.cedula === p.clienteCedula; });
+    if (c) {
+      var nombre = [c.nombre, c.ap1, c.ap2].filter(Boolean).join(' ');
+      document.getElementById('f-cliente-cedula').value = p.clienteCedula;
+      document.getElementById('cliente-ligado-display').innerHTML =
+        '<div class="cliente-ligado"><span>OK <strong>' + nombre + '</strong> - ' + p.clienteCedula + '</span>' +
+        '<span class="quitar" onclick="quitarClientePoliza()">X</span></div>';
+      return;
+    }
+  }
+  document.getElementById('f-cliente-cedula').value = '';
+  document.getElementById('cliente-ligado-display').innerHTML =
+    '<button type="button" class="buscar-cliente-btn" onclick="abrirModalBuscarCli()">Buscar y vincular cliente...</button>';
+};
+
+// Botón aviso en fila de poliza
+function avisarDesdePoliza(cedula) {
+  var clientes = cargarClientes();
+  var idx = clientes.findIndex(function(c) { return c.cedula === cedula; });
+  if (idx === -1) { alert('No se encontro el cliente vinculado.'); return; }
+  var c = clientes[idx];
+  var tieneWA = !!(c.tel || '').trim();
+  var tieneEmail = !!(c.email || '').trim();
+  if (!tieneWA && !tieneEmail) {
+    if (confirm('El cliente no tiene telefono ni email. Deseas editarlo ahora?')) abrirModalCliente(idx);
+    return;
+  }
+  if (tieneWA && tieneEmail) {
+    var canal = confirm([c.nombre, c.ap1, c.ap2].filter(Boolean).join(' ') +
+      '\n\nAceptar = WhatsApp (' + c.tel + ')\nCancelar = Email (' + c.email + ')') ? 'wa' : 'email';
+    abrirModalAvisar(idx, canal);
+  } else { abrirModalAvisar(idx, tieneWA ? 'wa' : 'email'); }
+}
+
+// ===== MODAL AVISAR =====
+function abrirModalAvisar(idx, canal) {
+  clienteAvisarIndex = idx;
+  var clientes = cargarClientes();
+  var c = clientes[idx];
+  var nombre = [c.nombre, c.ap1, c.ap2].filter(Boolean).join(' ');
+  var pols = [];
+  Object.entries(db.polizas || {}).forEach(function(entry) {
+    entry[1].forEach(function(p) { if (p.clienteCedula === c.cedula) pols.push(Object.assign({}, p, {mes: entry[0]})); });
+  });
+
+  document.getElementById('avisar-titulo').textContent = canal === 'wa' ? 'Recordatorio WhatsApp' : 'Recordatorio Email';
+  document.getElementById('avisar-cliente-info').innerHTML =
+    '<strong>' + nombre + '</strong><br>' + c.cedula +
+    (c.tel ? '   ' + c.tel : '') + (c.email ? '   ' + c.email : '');
+
+  if (pols.length === 0) {
+    document.getElementById('avisar-polizas-list').innerHTML = '<div style="padding:12px;color:var(--gray-700);font-size:13px;">Sin polizas vinculadas.</div>';
+  } else {
+    document.getElementById('avisar-polizas-list').innerHTML = pols.map(function(p, i) {
+      return '<div class="poliza-aviso-item">' +
+        '<input type="checkbox" id="chk-pol-' + i + '" checked onchange="actualizarPreviewAviso()">' +
+        '<div class="pol-info"><strong>' + p.aseg + ' - ' + p.poliza + '</strong>' +
+        '<div>' + p.frec + ' | ' + p.moneda + ' ' + (p.monto || 0).toLocaleString('es-CR') + '</div>' +
+        '<div class="pol-venc">Vence: ' + formatDateCR(p.venc) + '</div></div></div>';
+    }).join('');
+  }
+
+  var tieneWA = !!(c.tel || '').trim();
+  var tieneEmail = !!(c.email || '').trim();
+  document.getElementById('btn-enviar-wa').style.display = tieneWA ? '' : 'none';
+  document.getElementById('btn-enviar-mail').style.display = tieneEmail ? '' : 'none';
+  document.getElementById('modal-avisar').dataset.cliIdx = idx;
+  actualizarPreviewAviso();
+  document.getElementById('modal-avisar').classList.add('open');
+}
+
+function cerrarModalAvisar() { document.getElementById('modal-avisar').classList.remove('open'); }
+
+function generarMensajeAviso() {
+  var idx = parseInt(document.getElementById('modal-avisar').dataset.cliIdx);
+  var c = cargarClientes()[idx];
+  var nombre = [c.nombre, c.ap1, c.ap2].filter(Boolean).join(' ');
+  var pols = [];
+  Object.entries(db.polizas || {}).forEach(function(entry) {
+    entry[1].forEach(function(p) { if (p.clienteCedula === c.cedula) pols.push(Object.assign({}, p, {mes: entry[0]})); });
+  });
+  var seleccionadas = pols.filter(function(p, i) { var chk = document.getElementById('chk-pol-' + i); return chk ? chk.checked : false; });
+  if (seleccionadas.length === 0) return 'Selecciona al menos una poliza.';
+  
+  var mensaje = '🔔 Recordatorio de Pago: Su Póliza\n\nHola, ' + nombre + ' 👋\n\n';
+  mensaje += 'Le saludamos para recordarle el próximo vencimiento de su seguro:\n\n';
+  
+  seleccionadas.forEach(function(p) {
+    var simbolo = p.moneda === 'USD' ? '$' : '₡';
+    var monto = simbolo + (p.monto || 0).toLocaleString('es-CR', {minimumFractionDigits:2, maximumFractionDigits:2});
+    mensaje += '📄 Póliza: ' + p.aseg + ' N° ' + p.poliza + '\n';
+    mensaje += '📅 Vence el: ' + formatDateCR(p.venc) + '\n';
+    mensaje += '💰 Monto a cancelar: ' + monto + '\n\n';
+  });
+  
+  mensaje += 'Para nosotros es un gusto protegerle. Si ya realizó el pago, por favor ignore este mensaje.\n\n';
+  mensaje += '📲 ¿Dudas o asistencia? Contáctenos al 6060-2008\n\n';
+  mensaje += '¡Gracias por su confianza! ✨';
+  
+  return mensaje;
+}
+
+function actualizarPreviewAviso() { document.getElementById('avisar-preview').textContent = generarMensajeAviso(); }
+
+function generarMensajeWA() {
+  var idx = parseInt(document.getElementById('modal-avisar').dataset.cliIdx);
+  var c = cargarClientes()[idx];
+  var nombre = [c.nombre, c.ap1, c.ap2].filter(Boolean).join(' ');
+  var pols = [];
+  Object.entries(db.polizas || {}).forEach(function(entry) {
+    entry[1].forEach(function(p) { if (p.clienteCedula === c.cedula) pols.push(Object.assign({}, p, {mes: entry[0]})); });
+  });
+  var seleccionadas = pols.filter(function(p, i) { var chk = document.getElementById('chk-pol-' + i); return chk ? chk.checked : false; });
+  if (seleccionadas.length === 0) return 'Selecciona al menos una poliza.';
+  
+  var mensaje = '*RECORDATORIO DE PAGO*\n\n';
+  mensaje += 'Hola, ' + nombre + '\n\n';
+  mensaje += 'Le saludamos para recordarle el próximo vencimiento de su seguro:\n\n';
+  
+  seleccionadas.forEach(function(p) {
+    var simbolo = p.moneda === 'USD' ? '$' : '';
+    var monto = simbolo + (p.monto || 0).toLocaleString('es-CR', {minimumFractionDigits:2, maximumFractionDigits:2});
+    mensaje += '• Póliza: ' + p.aseg + ' *N° ' + p.poliza + '*\n';
+    mensaje += '• Vence el: *' + formatDateCR(p.venc) + '*\n';
+    mensaje += '• Monto a cancelar: *₡' + monto + '*\n\n';
+  });
+  
+  mensaje += 'Para nosotros es un gusto protegerle. Si ya realizó el pago, por favor ignore este mensaje.\n\n';
+  mensaje += '¿Dudas o asistencia? Contáctenos al 6060-2008\n\n';
+  mensaje += '¡Gracias por su confianza!';
+  
+  return mensaje;
+}
+
+function enviarAvisoWA() {
+  var idx = parseInt(document.getElementById('modal-avisar').dataset.cliIdx);
+  var c = cargarClientes()[idx];
+  var msg = generarMensajeWA();
+  if (msg === 'Selecciona al menos una poliza.') { alert(msg); return; }
+  var tel = (c.tel || '').replace(/[\s\-\(\)\.]/g, '');
+  var wa = tel.startsWith('506') ? tel : '506' + tel;
+  window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(msg), '_blank');
+  cerrarModalAvisar();
+}
+
+function enviarAvisoEmail() {
+  var idx = parseInt(document.getElementById('modal-avisar').dataset.cliIdx);
+  var c = cargarClientes()[idx];
+  var msg = generarMensajeAviso();
+  if (msg === 'Selecciona al menos una poliza.') { alert(msg); return; }
+  window.location.href = 'mailto:' + c.email + '?subject=' + encodeURIComponent('Aviso de Vencimiento de Poliza') + '&body=' + encodeURIComponent(msg);
+  cerrarModalAvisar();
+}
+
+// ===== BÚSQUEDA GLOBAL =====
+function buscarGlobal(valor) {
+  var div = document.getElementById('resultado-global');
+  var q = (valor || '').trim();
+  if (!q) { div.style.display = 'none'; return; }
+  var norm = function(s) { return (s || '').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); };
+  var qn = norm(q);
+  var resultados = [];
+  _MESES.forEach(function(mes) {
+    (db.polizas[mes] || []).forEach(function(p) {
+      if (norm(p.nombre + ' ' + p.poliza + ' ' + p.aseg).includes(qn)) resultados.push({mes: mes, p: p});
+    });
+  });
+  if (resultados.length === 0) {
+    div.style.display = 'block';
+    div.innerHTML = '<div style="padding:14px;text-align:center;color:#666;font-size:13px;">❌ Registro no encontrado para "' + q + '"</div>';
+    return;
+  }
+  div.style.display = 'block';
+  div.innerHTML = resultados.slice(0, 15).map(function(r) {
+    var mesLabel = r.mes.charAt(0).toUpperCase() + r.mes.slice(1);
+    return '<div onclick="irAPoliza(\'' + r.mes + '\', \'' + r.p.id + '\')" style="padding:9px 14px;border-bottom:1px solid #f0f0f0;cursor:pointer;font-size:13px;" onmouseover="this.style.background=\'#e8f0fe\'" onmouseout="this.style.background=\'white\'">' +
+      '<div style="font-weight:600;color:#172B4D;">' + r.p.nombre + '</div>' +
+      '<div style="font-size:11px;color:#666;">' + r.p.aseg + ' N.' + r.p.poliza + ' - <span style="color:#0052CC;font-weight:600;">' + mesLabel + '</span></div></div>';
+  }).join('') + (resultados.length > 15 ? '<div style="padding:6px;text-align:center;font-size:11px;color:#666;">...y ' + (resultados.length-15) + ' más</div>' : '');
+}
+
+function irAPoliza(mes, polizaId) {
+  document.getElementById('busq-global').value = '';
+  document.getElementById('resultado-global').style.display = 'none';
+  
+  // Usar un botón dummy ya que cambiarTab lo requiere
+  const dummyBtn = document.createElement('button');
+  dummyBtn.classList.add('tab-btn');
+  
+  // Cambiar al mes y actualizar el selector
+  cambiarTab(mes, dummyBtn);
+  
+  // Esperar a que se renderice la tabla
+  setTimeout(() => {
+    // Buscar todas las filas de la tabla
+    const filas = document.querySelectorAll('#page-' + mes + ' tbody tr');
+    let filaEncontrada = null;
+    
+    filas.forEach(fila => {
+      // Buscar si esta fila contiene los botones de editar/eliminar con el ID de la póliza
+      const btnEditar = fila.querySelector('button[onclick*="' + polizaId + '"]');
+      if (btnEditar) {
+        filaEncontrada = fila;
+      }
+    });
+    
+    if (filaEncontrada) {
+      // Resaltar la fila
+      filaEncontrada.style.backgroundColor = '#FFD700';
+      filaEncontrada.style.transition = 'background-color 0.3s';
+      
+      // Hacer scroll a la fila
+      filaEncontrada.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+      // Quitar el resaltado después de 3 segundos
+      setTimeout(() => {
+        filaEncontrada.style.backgroundColor = '';
+      }, 3000);
+    }
+  }, 100);
+}
+
+// ===== EXPORTAR A EXCEL =====
+function exportarExcel(mes) {
+  const polizas = db.polizas[mes] || [];
+  if (!filtros[mes]) filtros[mes] = { busq: '', estado: '', frec: '', orden: 'pago', fechaDesde: '', fechaHasta: '', fechaPagoDesde: '', fechaPagoHasta: '' };
+  
+  const busqueda = filtros[mes].busq.toLowerCase();
+  const filtroEstado = filtros[mes].estado;
+  const filtroFrec = filtros[mes].frec;
+  const fechaDesde = filtros[mes].fechaDesde || '';
+  const fechaHasta = filtros[mes].fechaHasta || '';
+  const fechaPagoDesde = filtros[mes].fechaPagoDesde || '';
+  const fechaPagoHasta = filtros[mes].fechaPagoHasta || '';
+  
+  const fechaDesdeISO = fechaDesde ? parseDateCR(fechaDesde) : '';
+  const fechaHastaISO = fechaHasta ? parseDateCR(fechaHasta) : '';
+  const fechaPagoDesdeISO = fechaPagoDesde ? parseDateCR(fechaPagoDesde) : '';
+  const fechaPagoHastaISO = fechaPagoHasta ? parseDateCR(fechaPagoHasta) : '';
+  
+  // Aplicar los mismos filtros que en renderMes
+  let filtradas = polizas.filter(function(p) {
+    const matchBusq = !busqueda || (p.nombre + p.poliza + p.aseg).toLowerCase().includes(busqueda);
+    const matchEst = !filtroEstado || calcEstado(p.pago, p.venc) === filtroEstado;
+    const matchFrec = !filtroFrec || p.frec === filtroFrec;
+    
+    let matchFechasVenc = true;
+    if (fechaDesdeISO || fechaHastaISO) {
+      const vencISO = parseDateCR(p.venc);
+      if (fechaDesdeISO && vencISO < fechaDesdeISO) matchFechasVenc = false;
+      if (fechaHastaISO && vencISO > fechaHastaISO) matchFechasVenc = false;
+    }
+    
+    let matchFechasPago = true;
+    if (fechaPagoDesdeISO || fechaPagoHastaISO) {
+      const pagoISO = parseDateCR(p.pago);
+      if (!pagoISO) matchFechasPago = false;
+      else {
+        if (fechaPagoDesdeISO && pagoISO < fechaPagoDesdeISO) matchFechasPago = false;
+        if (fechaPagoHastaISO && pagoISO > fechaPagoHastaISO) matchFechasPago = false;
+      }
+    }
+    
+    return matchBusq && matchEst && matchFrec && matchFechasVenc && matchFechasPago;
+  });
+  
+  if (filtradas.length === 0) {
+    alert('No hay pólizas que cumplan los filtros seleccionados.');
+    return;
+  }
+  
+  // Ordenar por fecha de vencimiento
+  filtradas.sort(function(a, b) {
+    const vencA = parseDateCR(a.venc);
+    const vencB = parseDateCR(b.venc);
+    if (!vencA && !vencB) return 0;
+    if (!vencA) return 1;
+    if (!vencB) return -1;
+    return vencA.localeCompare(vencB);
+  });
+  
+  // Crear CSV con punto y coma como delimitador (mejor para Excel en español)
+  let csv = '\uFEFF'; // BOM para UTF-8
+  csv += 'Nombre;Aseguradora;Tipo;Poliza;Frecuencia;F. Venc.;F. Pago;Estado;Moneda;Monto Bruto;IVA %;Neto;Comision %;Comision Total\n';
+  
+  filtradas.forEach(function(p) {
+    const estado = calcEstado(p.pago, p.venc);
+    const neto = calcNeto(p.monto, p.iva);
+    const comision = calcComision(p.monto, p.iva, p.com, p.pctCorredora);
+    const ivaPct = (p.iva * 100).toFixed(0);
+    const comPct = (p.com * 100).toFixed(2);
+    
+    // Formatear números con coma decimal para Excel español
+    const montoBruto = (p.monto || 0).toFixed(2).replace('.', ',');
+    const netoFormat = neto.toFixed(2).replace('.', ',');
+    const comisionFormat = comision.toFixed(2).replace('.', ',');
+    
+    csv += (p.nombre || '') + ';';
+    csv += (p.aseg || '') + ';';
+    csv += (p.tipo || '') + ';';
+    csv += (p.poliza || '') + ';';
+    csv += (p.frec || '') + ';';
+    csv += (p.venc ? formatDateCR(p.venc) : '') + ';';
+    csv += (p.pago ? formatDateCR(p.pago) : '') + ';';
+    csv += estado + ';';
+    csv += (p.moneda || '') + ';';
+    csv += montoBruto + ';';
+    csv += ivaPct + ';';
+    csv += netoFormat + ';';
+    csv += comPct + ';';
+    csv += comisionFormat + '\n';
+  });
+  
+  // Descargar archivo
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const link = document.createElement('a');
+  const url = URL.createObjectURL(blob);
+  
+  const fechaHoy = new Date().toISOString().split('T')[0];
+  const rangoTexto = (fechaDesde && fechaHasta) ? '_' + fechaDesde.replace(/\//g,'-') + '_a_' + fechaHasta.replace(/\//g,'-') : '';
+  const nombreArchivo = 'Reporte_' + mes.charAt(0).toUpperCase() + mes.slice(1) + rangoTexto + '_' + fechaHoy + '.csv';
+  
+  link.setAttribute('href', url);
+  link.setAttribute('download', nombreArchivo);
+  link.style.visibility = 'hidden';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('#busq-global') && !e.target.closest('#resultado-global')) {
+    var div = document.getElementById('resultado-global');
+    if (div) div.style.display = 'none';
+  }
+});
+
+// ===== GENERAR RECURRENCIAS AUTOMÁTICAS =====
+function generarRecurrenciasAutomaticas() {
+  const mesesArray = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+  
+  console.log('🔄 Iniciando generación de recurrencias...');
+  
+  // Objeto para almacenar las pólizas generadas
+  const polizasGeneradas = {};
+  mesesArray.forEach(m => { polizasGeneradas[m] = []; });
+  
+  let totalGeneradas = 0;
+  
+  // Procesar cada mes
+  mesesArray.forEach((mes, mesIndex) => {
+    const polizasMes = db.polizas[mes] || [];
+    
+    console.log(`Procesando ${mes}: ${polizasMes.length} pólizas`);
+    
+    polizasMes.forEach(poliza => {
+      // Solo procesar pólizas recurrentes
+      if (poliza.frec === 'CONTADO' || poliza.frec === 'DEDUCCIÓN AUTOMÁTICA') return;
+      
+      // Determinar cuántos meses adelante generar según frecuencia
+      let mesesASumar = 0;
+      if (poliza.frec === 'MENSUAL') mesesASumar = 1;
+      else if (poliza.frec === 'TRIMESTRAL') mesesASumar = 3;
+      else if (poliza.frec === 'SEMESTRAL') mesesASumar = 6;
+      else if (poliza.frec === 'ANUAL') mesesASumar = 12;
+      else return; // Frecuencia no reconocida
+      
+      // Parsear fecha de vencimiento
+      let fechaVencStr = poliza.venc;
+      
+      // Normalizar formato de fecha si es necesario
+      if (fechaVencStr.includes('/')) {
+        const partes = fechaVencStr.split('/');
+        if (partes.length === 3) {
+          fechaVencStr = `${partes[2]}-${partes[1].padStart(2,'0')}-${partes[0].padStart(2,'0')}`;
+        }
+      }
+      
+      const fechaVencOriginal = new Date(fechaVencStr + 'T12:00:00');
+      if (isNaN(fechaVencOriginal.getTime())) {
+        console.log(`⚠️ Fecha inválida en ${poliza.nombre}: ${poliza.venc}`);
+        return;
+      }
+      
+      // Generar recurrencias para el resto del año 2026
+      const anioActual = 2026;
+      const mesInicial = fechaVencOriginal.getMonth();
+      const diaVencimiento = fechaVencOriginal.getDate();
+      
+      // Calcular cuántas recurrencias generar
+      let mesActual = mesInicial;
+      let contador = 0;
+      
+      while (contador < 12) { // Máximo 12 iteraciones
+        mesActual += mesesASumar;
+        
+        // Si pasamos de diciembre, terminamos (no generar para 2027)
+        if (mesActual > 11) break;
+        
+        // Crear la nueva fecha
+        const nuevaFecha = new Date(anioActual, mesActual, diaVencimiento, 12, 0, 0);
+        
+        // Ajustar si el día no existe en ese mes (ej: 31 de febrero)
+        if (nuevaFecha.getDate() !== diaVencimiento) {
+          nuevaFecha.setDate(0); // Último día del mes anterior
+        }
+        
+        const nuevaFechaISO = nuevaFecha.toISOString().split('T')[0];
+        const mesDestino = mesesArray[mesActual];
+        
+        // Crear nueva póliza
+        const nuevaPoliza = {
+          id: 'recur_' + poliza.id + '_' + contador,
+          aseg: poliza.aseg,
+          tipo: poliza.tipo,
+          nombre: poliza.nombre,
+          poliza: poliza.poliza,
+          frec: poliza.frec,
+          venc: nuevaFechaISO,
+          pago: '',
+          moneda: poliza.moneda,
+          monto: poliza.monto,
+          iva: poliza.iva,
+          com: poliza.com,
+          pctCorredora: poliza.pctCorredora || 0.20,
+          clienteCedula: poliza.clienteCedula || ''
+        };
+        
+        polizasGeneradas[mesDestino].push(nuevaPoliza);
+        totalGeneradas++;
+        
+        contador++;
+      }
+    });
+  });
+  
+  // Agregar las pólizas generadas a cada mes
+  mesesArray.forEach(mes => {
+    if (polizasGeneradas[mes].length > 0) {
+      if (!db.polizas[mes]) db.polizas[mes] = [];
+      db.polizas[mes] = db.polizas[mes].concat(polizasGeneradas[mes]);
+      console.log(`✅ ${mes}: ${polizasGeneradas[mes].length} pólizas generadas`);
+    }
+  });
+  
+  console.log(`🎯 Total generadas: ${totalGeneradas} pólizas`);
+  
+  guardarDB();
+}
+
+// ===== FUNCIONES DE UTILIDAD =====
+function generarTodasLasRecurrencias() {
+  if (!confirm('🔁 Esto generará TODAS las recurrencias de las pólizas existentes según su frecuencia.\n\n¿Continuar?')) return;
+  
+  const mesesArray = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+  
+  const polizasGeneradas = {};
+  mesesArray.forEach(m => { polizasGeneradas[m] = []; });
+  
+  let totalGeneradas = 0;
+  
+  // Procesar cada mes
+  mesesArray.forEach((mes) => {
+    const polizasMes = db.polizas[mes] || [];
+    
+    polizasMes.forEach(poliza => {
+      // Solo pólizas recurrentes
+      if (poliza.frec === 'CONTADO' || poliza.frec === 'DEDUCCIÓN AUTOMÁTICA') return;
+      
+      // Ya tiene recurrencias generadas? (si el ID empieza con "recur_" saltar)
+      if (poliza.id && poliza.id.startsWith('recur_')) return;
+      
+      let mesesASumar = 0;
+      if (poliza.frec === 'MENSUAL') mesesASumar = 1;
+      else if (poliza.frec === 'TRIMESTRAL') mesesASumar = 3;
+      else if (poliza.frec === 'SEMESTRAL') mesesASumar = 6;
+      else if (poliza.frec === 'ANUAL') mesesASumar = 12;
+      else return;
+      
+      // Parsear fecha
+      let fechaVencStr = poliza.venc;
+      if (fechaVencStr.includes('/')) {
+        const partes = fechaVencStr.split('/');
+        if (partes.length === 3) {
+          fechaVencStr = `${partes[2]}-${partes[1].padStart(2,'0')}-${partes[0].padStart(2,'0')}`;
+        }
+      }
+      
+      const fechaVencOriginal = new Date(fechaVencStr + 'T12:00:00');
+      if (isNaN(fechaVencOriginal.getTime())) return;
+      
+      const anioActual = 2026;
+      const mesInicial = fechaVencOriginal.getMonth();
+      const diaVencimiento = fechaVencOriginal.getDate();
+      
+      let mesActual = mesInicial;
+      let contador = 0;
+      
+      while (contador < 12) {
+        mesActual += mesesASumar;
+        if (mesActual > 11) break;
+        
+        const nuevaFecha = new Date(anioActual, mesActual, diaVencimiento, 12, 0, 0);
+        if (nuevaFecha.getDate() !== diaVencimiento) {
+          nuevaFecha.setDate(0);
+        }
+        
+        const nuevaFechaISO = nuevaFecha.toISOString().split('T')[0];
+        const mesDestino = mesesArray[mesActual];
+        
+        const nuevaPoliza = {
+          id: 'recur_' + poliza.id + '_' + contador,
+          aseg: poliza.aseg,
+          tipo: poliza.tipo,
+          nombre: poliza.nombre,
+          poliza: poliza.poliza,
+          frec: poliza.frec,
+          venc: nuevaFechaISO,
+          pago: '',
+          moneda: poliza.moneda,
+          monto: poliza.monto,
+          iva: poliza.iva,
+          com: poliza.com,
+          pctCorredora: poliza.pctCorredora || 0.20,
+          clienteCedula: poliza.clienteCedula || ''
+        };
+        
+        polizasGeneradas[mesDestino].push(nuevaPoliza);
+        totalGeneradas++;
+        contador++;
+      }
+    });
+  });
+  
+  // Agregar pólizas generadas
+  mesesArray.forEach(mes => {
+    if (polizasGeneradas[mes].length > 0) {
+      if (!db.polizas[mes]) db.polizas[mes] = [];
+      db.polizas[mes] = db.polizas[mes].concat(polizasGeneradas[mes]);
+    }
+  });
+  
+  guardarDB();
+  
+  alert(`✅ ¡Listo!\n\nSe generaron ${totalGeneradas} pólizas recurrentes.\n\nAhora puedes ir a Mayo, Agosto, etc. y verás las pólizas según su frecuencia.`);
+  
+  // Recargar vista actual
+  if (mesActual === 'dashboard') {
+    renderDashboard();
+  } else if (mesActual === 'clientes') {
+    renderClientes();
+  } else {
+    renderMes(mesActual);
+  }
+}
+
+function exportarDatos() {
+  const dataStr = JSON.stringify(db, null, 2);
+  const blob = new Blob([dataStr], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'comisiones_backup_' + new Date().toISOString().split('T')[0] + '.json';
+  link.click();
+  URL.revokeObjectURL(url);
+  alert('✅ Datos exportados correctamente');
+}
+
+function limpiarYCargarEjemplo() {
+  localStorage.clear();
+  location.reload();
+}
+
+// Inicializar sistema en el mes vigente
+(function inicializarSistema() {
+  // Obtener mes actual
+  const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+  const mesActualNum = new Date().getMonth(); // 0-11
+  const mesVigente = meses[mesActualNum];
+  
+  // Activar el mes vigente
+  const primerBtn = document.querySelector('.tab-btn');
+  cambiarTab(mesVigente, primerBtn);
+  
+  // Actualizar fecha actual en el header
+  actualizarFechaActual();
+})();
+
+</script>
+
+</body>
+</html>
